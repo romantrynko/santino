@@ -1,5 +1,5 @@
 import { cn } from '@/utils/utils';
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, useEffect, useState } from 'react';
 
 type MenuSectionButtonProps = {
   children: React.ReactNode;
@@ -7,6 +7,7 @@ type MenuSectionButtonProps = {
   innerContainerClassName?: string;
   textClassName?: string;
   onClick?: (path: string) => void;
+  delay: number;
 };
 
 const MenuSectionButton = ({
@@ -14,8 +15,16 @@ const MenuSectionButton = ({
   containerClassName,
   innerContainerClassName,
   textClassName,
-  onClick
+  onClick,
+  delay,
 }: MenuSectionButtonProps) => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShow(true), delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
   const handleClick: MouseEventHandler<HTMLDivElement> = (event) => {
     if (onClick) {
       onClick(event.currentTarget.dataset.path || '');
@@ -26,12 +35,15 @@ const MenuSectionButton = ({
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div
       className={cn(
-        'flex justify-center items-center bg-amber-950 p-2 rounded-[30px] transition active:bg-amber-800 active:duration-300',
+        `flex justify-center items-center bg-amber-950 p-2 rounded-[30px] active:bg-amber-800 active:duration-300 transition duration-200 ease-in ${
+          show ? 'opacity-100' : 'opacity-0'
+        }`,
         containerClassName
       )}
       onClick={handleClick}>
       <div
-        className={cn("flex justify-center items-center border border-white h-full w-full rounded-[20px] py-6",
+        className={cn(
+          'flex justify-center items-center border border-white h-full w-full rounded-[20px] py-6',
           innerContainerClassName
         )}>
         <div

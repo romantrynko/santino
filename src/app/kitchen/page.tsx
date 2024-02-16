@@ -36,9 +36,10 @@ const KitchenPageContent = () => {
       />
       
       <div className={cn('flex flex-col w-full h-full gap-3 mt-2', {})}>
-        {kitchenSectionButtons.map(({ name, path }) => (
+        {kitchenSectionButtons.map(({ name, path }, index) => (
           <MenuSectionButton
             key={path}
+            delay={index * 300}
             textClassName='text-[18px]'
             onClick={() => handleButtonClick(path)}>
             {name.toUpperCase()}
