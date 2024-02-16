@@ -9,18 +9,6 @@ import { useRouter } from 'next/navigation';
 import React, { useMemo } from 'react';
 
 const buttons = [
-  // { value: 1, name: 'Закуски', path: '/kitchen/appetizer' },
-  // { value: 2, name: 'Салати', path: '/salads' },
-  // { value: 3, name: 'Супи', path: '/soups' },
-  // { value: 4, name: 'Гарячі закуски', path: '/hot_appetizer' },
-  // { value: 5, name: 'Гарніри', path: '/side_dishes' },
-  // { value: 6, name: 'Десерти', path: '/desserts' },
-  // { value: 7, name: 'Паста', path: '/pasta' },
-  // { value: 8, name: 'Основні страви', path: '/main_dishes' },
-  // { value: 9, name: 'Для дітей', path: '/for_kids' },
-  // { value: 10, name: 'Гарячі напої', path: '/hot_drinks' },
-  // { value: 11, name: 'Мангал меню', path: '/mangal_menu' },
-  // { value: 12, name: 'Соуси', path: '/souces' },
   { value: 13, name: 'Міцний алкоголь', path: '/strong_alcohol' },
   { value: 14, name: 'Вино', path: '/wine' },
   { value: 15, name: 'КОКТЕЙЛІ', path: '/coctails' },

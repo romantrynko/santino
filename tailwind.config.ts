@@ -13,7 +13,8 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         santino: 'url("/assets/images/santino.png")',
-        'santino-header': 'url("/assets/images/santino_header.png")'
+        'santino-header': 'url("/assets/images/santino_header.png")',
+        salads: 'url("/assets/images/salads.png")'
       }
     }
   },

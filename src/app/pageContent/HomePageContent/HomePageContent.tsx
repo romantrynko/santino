@@ -35,7 +35,7 @@ const HomePageContent = () => {
         {buttons.map(({ name, path, padding }) => (
           <MenuSectionButton
             key={path}
-            containerClassName={cn("bg-amber-950 p-4 rounded transition duration-300 ease-in-out cursor-pointer active:bg-amber-800 active:transform active:translate-1 active:duration-300 active:ease-in-out", padding)}
+            containerClassName={cn("", padding)}
             textClassName="text-[24px] font-serif font-light text-amber-100 "
             onClick={() => handleButtonClick(path)}
             >
