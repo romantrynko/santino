@@ -12,7 +12,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        santino: 'url("/assets/images/santino.png")'
+        santino: 'url("/assets/images/santino.png")',
+        'santino-header': 'url("/assets/images/santino_header.png")'
       }
     }
   },

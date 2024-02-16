@@ -2,7 +2,7 @@ import { cn } from '@/utils/utils';
 import React from 'react';
 
 interface PageHeaderProps {
-  title: string;
+  title?: string;
   containerClassName?: string;
   textClassName?: string;
 }

@@ -14,16 +14,15 @@ const MenuSectionButton = ({
   textClassName,
   onClick
 }: MenuSectionButtonProps) => {
- 
-
   return (
     <div className={cn('inline-block', containerClassName)}>
       {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
       <div
-        className={cn('text-white font-bold py-2 px-4 rounded', textClassName)}
-        onClick={onClick}
-      >
-        <div className="text-center">{children}</div>
+        className={cn('text-white rounded', textClassName)}
+        onClick={onClick}>
+        <div className='border border-white py-4'>
+          <div className="text-center">{children}</div>
+        </div>
       </div>
     </div>
   );
