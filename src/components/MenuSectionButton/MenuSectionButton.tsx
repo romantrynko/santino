@@ -1,9 +1,10 @@
 import { cn } from '@/utils/utils';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 type MenuSectionButtonProps = {
   children: React.ReactNode;
   containerClassName?: string;
+  innerContainerClassName?: string;
   textClassName?: string;
   onClick?: (path: string) => void;
 };
@@ -11,17 +12,34 @@ type MenuSectionButtonProps = {
 const MenuSectionButton = ({
   children,
   containerClassName,
+  innerContainerClassName,
   textClassName,
   onClick
 }: MenuSectionButtonProps) => {
+  const handleClick: MouseEventHandler<HTMLDivElement> = (event) => {
+    if (onClick) {
+      onClick(event.currentTarget.dataset.path || '');
+    }
+  };
+
   return (
-    <div className={cn('inline-block bg-amber-950 p-4 rounded transition duration-300 ease-in-out cursor-pointer active:bg-amber-800 active:transform active:translate-1 active:duration-300 active:ease-in-out', containerClassName)}>
-      {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+    // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+    <div
+      className={cn(
+        'flex justify-center items-center bg-amber-950 p-2 rounded-[30px] transition active:bg-amber-800 active:duration-300',
+        containerClassName
+      )}
+      onClick={handleClick}>
       <div
-        className={cn('text-white rounded', textClassName)}
-        onClick={onClick}>
-        <div className='border border-white py-4'>
-          <div className="text-center">{children}</div>
+        className={cn("flex justify-center items-center border border-white h-full w-full rounded-[20px] py-6",
+          innerContainerClassName
+        )}>
+        <div
+          className={cn(
+            'text-center text-[24px] font-serif font-light text-amber-100',
+            textClassName
+          )}>
+          {children}
         </div>
       </div>
     </div>

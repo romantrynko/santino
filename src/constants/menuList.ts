@@ -99,8 +99,8 @@ export const saladsList: IMenuItem[] = [
 ];
 
 export const homePageSectionButtons = [
-  { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-10' },
-  { value: 2, name: 'Бар', path: '/bar', padding: 'p-10' }
+  { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
+  { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }
 ];
 
 export const kitchenSectionButtons = [

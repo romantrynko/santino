@@ -11,12 +11,14 @@ const HomePageContent = () => {
 
   const router = useRouter();
 
-  const handleButtonClick = useMemo(() => (path: string) => {
-    setTimeout(() => {
-      router.push(path);
-    }, 300);
-    
-  }, [router]);
+  const handleButtonClick = useMemo(
+    () => (path: string) => {
+      setTimeout(() => {
+        router.push(path);
+      }, 300);
+    },
+    [router]
+  );
 
   return (
     <div
@@ -31,12 +33,10 @@ const HomePageContent = () => {
         {homePageSectionButtons.map(({ name, path, padding }) => (
           <MenuSectionButton
             key={path}
-            containerClassName={cn("", padding)}
+            containerClassName={cn('flex-1', padding)}
             textClassName="text-[24px] font-serif font-light text-amber-100 "
-            onClick={() => handleButtonClick(path)}
-            >
+            onClick={() => handleButtonClick(path)}>
             {name}
-           
           </MenuSectionButton>
         ))}
       </div>

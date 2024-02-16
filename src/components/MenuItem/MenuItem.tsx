@@ -1,3 +1,4 @@
+import { cn } from '@/utils/utils';
 import React from 'react';
 
 export type IMenuItem = {
@@ -16,8 +17,10 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
   return (
     <div
       key={item.name}
-      className="flex w-full justify-between font-sans mb-5 border-b pb-1">
-      <div className="flex w-full flex-col text-[12px] r-2font-semibold gap-2">
+      className="flex w-full justify-between font-sans border border-lime-500 p-3 px-2 rounded bg-white opacity-90">
+      <div className={cn("flex w-full flex-col text-[12px] mr-8 font-semibold gap-2", 
+        item.variants && 'mr-0'
+      )}>
         {item.name}
         {item.description && (
           <div className="text-[10px] font-light">
