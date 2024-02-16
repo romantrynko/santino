@@ -18,7 +18,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
     <div
       key={item.name}
       className="flex w-full justify-between font-sans border border-lime-500 p-3 px-2 rounded bg-white opacity-90">
-      <div className={cn("flex w-full flex-col text-[12px] mr-8 font-semibold gap-2", 
+      <div className={cn("flex w-full justify-center flex-col text-[12px] mr-8 font-semibold gap-2", 
         item.variants && 'mr-0'
       )}>
         {item.name}
@@ -32,9 +32,9 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
             {item.variants.map((variant) => (
               <div
                 key={variant.name}
-                className="flex w-full justify-between font-sans mb-2">
+                className="flex w-full items-center justify-between font-sans mb-2">
                 {variant.name}
-                <div className="flex gap-3 font-serif text-[16px]">
+                <div className="flex justify-center items-center gap-3 font-serif text-[16px]">
                   <div className="font-light italic">{variant.weight}</div>
                   <div className="font-bold">{variant.price}</div>
                 </div>
@@ -43,7 +43,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
           </div>
         )}
       </div>
-      {item.price && <div className="flex gap-3 font-serif">
+      {item.price && <div className="flex justify-center items-center gap-3 font-serif">
         {item.weight && <div className="italic">{item.weight}</div>}
         <div className="font-bold">{item.price}</div>
       </div>}

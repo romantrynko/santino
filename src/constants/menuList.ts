@@ -84,7 +84,7 @@ export const saladsList: IMenuItem[] = [
   {
     name: 'САЛАТ ТЕПЛИЙ МЯСНИЙ З ОВОЧАМИ ТА СТЕБЛОМ САЛЕРИ',
     weight: '350',
-    price: '126060'
+    price: '260'
   },
   {
     name: 'САЛАТ «CЛОВЯНСЬКИЙ»',

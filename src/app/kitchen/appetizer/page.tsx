@@ -13,7 +13,7 @@ const AppetizerPage = () => {
 
       <SectionPageHeader title="Закуски" />
 
-      <div className="absolute top-40 z-1 pb-20">
+      <div className="absolute top-[130px] z-1 pb-20">
         <div className="flex flex-col w-full mb-2 px-2 gap-2">
           {appetizierList.map((item) => (
             <MenuItem key={`${item.price}-${item.weight}`} item={item} />
