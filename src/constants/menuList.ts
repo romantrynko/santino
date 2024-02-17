@@ -179,76 +179,173 @@ export const mainDishes = [
 
 export const sideDishes = [
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'КАРТОПЛЯ ЗАПЕЧЕНА З ЧАСНИКОМ',
+    weight: '150',
+    price: '110'
   },
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'КАРТОПЛЯ ФРІ + КЕТЧУП',
+    weight: '150/50',
+    price: '150'
   },
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'ПОЛЕНТА З ПАРМЕЗАНОМ',
+    weight: '200/30',
+    price: '140'
+  },
+  {
+    name: 'СТРУЧКОВА КВАСОЛЯ В КИСЛОСОЛОДКОМУ СОУСІ З ІМБИРЕМ',
+    weight: '200',
+    price: '130'
   }
 ];
 
 export const pasta = [
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'КАРБОНАРА З ДОМАШНІМ ШПОНДЕРОМ',
+    weight: '340',
+    price: '260'
   },
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'ПАСТА З ЛОСОСЕМ',
+    weight: '300',
+    price: '320'
   },
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'ФЕТУЧІНІ З КУРКОЮ ТА ОВОЧАМИ',
+    weight: '350',
+    price: '260'
   }
 ];
 
 export const desserts = [
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'СИРНИКИ З ЯГІДНИМ СОУСОМ',
+    weight: '150/50',
+    price: '140'
   },
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'НАЛИСНИК–ТОРБИНКА З СИРНИМ МУСОМ ТА КАРАМЕЛЛЮ',
+    weight: '200',
+    price: '140'
   },
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'НАЛИСНИКИ З ПРЯНИМИ ЯБЛУКАМИ',
+    weight: '250',
+    price: '160'
+  },
+  {
+    name: 'ШТРУДЕЛЬ З ВИШНЕЮ З КУЛЬКОЮ МОРОЗИВА',
+    weight: '150/50',
+    price: '200'
+  },
+  {
+    name: 'ТОМЛЕНІ ЛІСОВІ ЯГОДИ 2 З ВАНІЛЬНИМ МОРОЗИВОМ',
+    weight: '200/50',
+    price: '180'
+  },
+  {
+    name: 'МОРОЗИВО',
+    weight: '100',
+    price: '120'
+  },
+  {
+    name: 'ДОДАТКИ ДО МОРОЗИВA: ШОКОЛАД, КАРАМЕЛЬ, ГОРІХИ',
+    price: '30'
+  },
+  {
+    name: 'ВЕРШКИ З ЧОРНОСЛИВОМ',
+    weight: '150',
+    price: '140'
   }
 ];
 
 export const forKids = [
   {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'БУЛЬЙОН З МАКАРОНАМИ',
+    weight: '200',
+    price: '90'
   },
   {
-    name: '',
-    weight: '',
-    price: ''
-  },
-  {
-    name: '',
-    weight: '',
-    price: ''
+    name: 'НАГЕТСИ З КАРТОПЛЕЮ ФРІ',
+    price: '240'
   }
 ];
 
+export const hotDrinks = [
+  {
+    name: 'ЕСПРЕССО',
+    price: '60'
+  },
+  {
+    name: 'АМЕРИКАНО',
+    price: '60'
+  },
+  {
+    name: 'АМЕРИКАНО З МОЛОКОМ',
+    price: '70'
+  },
+  {
+    name: 'КАВА ПО-ІРЛАНДСЬКИ',
+    price: '140'
+  },
+  {
+    name: 'КАПУОРАНЖ (холодна кава)',
+    price: '90'
+  },
+  {
+    name: 'КАПУЧІНО',
+    price: '80'
+  },
+  {
+    name: 'КАПУЧІНО на рослинному молоці',
+    price: '100'
+  },
+  {
+    name: 'ЛАТТЕ',
+    price: '90'
+  },
+  {
+    name: 'ФЛЕТ-ВАЙТ',
+    price: '140'
+  },
+  {
+    name: 'КАКАО НЕСКВІК',
+    price: '60'
+  }
+];
+
+export const mangalMenu = [
+  {type: 'М’ЯСО'},
+  {
+    name: 'ШАШЛИК',
+    variants: [
+      { name: '- З КУРЯЧОГО ФІЛЕ', weight: '100', price: '80' },
+      { name: '- З КУРЯЧОГО СТЕГНА БЕЗ КІСТКИ', weight: '100', price: '80' },
+      { name: '- СВИННИЙ ОШИЙОК', weight: '100', price: '110' },
+      { name: '- СВИННА ВИРІЗКА', weight: '100', price: '120' },
+      { name: '- З ПОЛЯДВИЦІ ТЕЛЯТИНИ', weight: '100', price: '140' },
+      { name: '- РЕБРА СВИННІ', weight: '100', price: '95' }
+    ]
+  },
+  { type: 'РИБА' },
+  {
+    name: 'ФОРЕЛЬ НА МАНГАЛІ З ЛИМОНОМ',
+    weight: '100',
+    price: '140'
+  },
+  {
+    name: 'ДОРАДО НА МАНГАЛІ З РОЗМАРИНОМ',
+    weight: '100',
+    price: '150'
+  },
+  {
+    name: 'ФІЛЕ ЛОСОСЯ З МАНГАЛУ',
+    weight: '100',
+    price: '180'
+  },
+  { name: 'ОВОЧІ ПЕЧЕНІ НА МАНГАЛІ', weight: '250', price: '120' }
+];
 export const homePageSectionButtons = [
   { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
   { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }
@@ -373,15 +470,15 @@ export enum BarSectionsNames {
 export const KitchenMenuList = {
   [KitchenMenuSections.Appetizers]: appetizerList,
   [KitchenMenuSections.Salads]: saladsList,
-  [KitchenMenuSections.Soups]: [],
+  [KitchenMenuSections.Soups]: soups,
   [KitchenMenuSections.HotAppetizert]: hotAppetizer,
-  [KitchenMenuSections.SideDishes]: [],
-  [KitchenMenuSections.Desserts]: [],
-  [KitchenMenuSections.Pasta]: [],
-  [KitchenMenuSections.MainDishes]: [],
-  [KitchenMenuSections.ForKids]: [],
-  [KitchenMenuSections.HotDrinks]: [],
-  [KitchenMenuSections.MangalMenu]: [],
+  [KitchenMenuSections.SideDishes]: sideDishes,
+  [KitchenMenuSections.Desserts]: desserts,
+  [KitchenMenuSections.Pasta]: pasta,
+  [KitchenMenuSections.MainDishes]: mainDishes,
+  [KitchenMenuSections.ForKids]: forKids,
+  [KitchenMenuSections.HotDrinks]: hotDrinks,
+  [KitchenMenuSections.MangalMenu]: mangalMenu,
   [KitchenMenuSections.Souces]: []
 };
 
