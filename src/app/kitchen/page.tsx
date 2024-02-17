@@ -6,6 +6,7 @@ import MenuSectionButton from '@/components/MenuSectionButton';
 import { kitchenSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useMemo } from 'react';
 
@@ -45,14 +46,16 @@ const KitchenPageContent = () => {
       />
 
       <div className={cn('flex flex-col w-full h-full gap-4 mt-2', {})}>
-        {kitchenSectionButtons.map(({ name, path }, index) => (
-          <MenuSectionButton
-            key={path}
-            delay={index * 150}
-            textClassName="text-[18px]"
-            onClick={() => handleButtonClick(path)}>
-            {name.toUpperCase()}
-          </MenuSectionButton>
+        {kitchenSectionButtons.map(({ name, section }, index) => (
+          <Link
+            href={`/kitchen/${section}`}
+            key={section}>
+            <MenuSectionButton
+              delay={index * 150}
+              textClassName="text-[18px]">
+              {name.toUpperCase()}
+            </MenuSectionButton>
+          </Link>
         ))}
       </div>
     </div>

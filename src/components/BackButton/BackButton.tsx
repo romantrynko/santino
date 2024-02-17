@@ -1,24 +1,27 @@
 import { cn } from '@/utils/utils';
 import { useRouter } from 'next/navigation';
+import { useCallback } from 'react';
 
 type RouteButtonProps = {
   text: string;
-  route: string;
+  route?: string;
   containerClassName?: string;
   textClassName?: string;
+  onClick?: () => void;
 };
 
 const RouteButton = ({
   text = 'Бар',
   route,
   containerClassName,
-  textClassName
+  textClassName,
+  onClick
 }: RouteButtonProps) => {
   const router = useRouter();
 
-  const handleButtonClick = () => {
-    setTimeout(() => router.push(route), 200);
-  };
+  const handleButtonClick = useCallback(() => {
+    !onClick ? setTimeout(() => router.push(route || ''), 200) : onClick();
+  }, [onClick, route, router]);
 
   return (
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
