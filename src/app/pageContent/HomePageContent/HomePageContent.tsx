@@ -26,15 +26,16 @@ const HomePageContent = () => {
         'w-full': isMobileInPortrait
       })}>
       <PageHeader
-        containerClassName="h-40 bg-santino-header"
+        containerClassName="h-40 bg-santino"
         textClassName="font-extralight text-white text-[70px] tracking-widest"
       />
-      <div className={cn('flex flex-1 flex-col w-full h-full gap-2 mt-2', {})}>
-        {homePageSectionButtons.map(({ name, path, padding }) => (
+      <div className={cn('flex flex-1 flex-col w-full gap-4 mt-2', {})}>
+        {homePageSectionButtons.map(({ name, path }, index) => (
           <MenuSectionButton
             key={path}
-            containerClassName={cn('flex-1', padding)}
-            textClassName="text-[24px] font-serif font-light text-amber-100 "
+            delay={index * 300}
+            containerClassName={cn('flex-1')}
+            textClassName="text-[34px] font-serif font-light"
             onClick={() => handleButtonClick(path)}>
             {name}
           </MenuSectionButton>

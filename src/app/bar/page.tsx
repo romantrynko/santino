@@ -30,7 +30,7 @@ const BarPageContent = () => {
       })}>
       <BackButton />
       <PageHeader
-        containerClassName="h-40 bg-santino-header"
+        containerClassName="h-40 bg-santino"
         textClassName="font-extralight text-white text-[70px] tracking-widest"
       />
       <div className={cn('flex flex-col w-full h-full gap-2 mt-2', {})}>

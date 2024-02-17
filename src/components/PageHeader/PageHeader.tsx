@@ -8,19 +8,18 @@ interface PageHeaderProps {
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({
-  title,
+  title = "Сантіно",
   containerClassName,
   textClassName,
   ...props
 }) => {
   return (
     <div
-      className={cn(
-        'w-full bg-cover bg-center flex justify-center items-center h-20 p-2 rounded',
+      className={cn("w-full bg-cover bg-center flex justify-center items-center h-20 p-2 rounded-[24px] opacity-75",
         containerClassName
       )}
       {...props}>
-      <div className={cn('inline-flex text-2xl', textClassName)}>{title}</div>
+      <div className={cn('inline-flex text-2xl font-serif', textClassName)}>{title}</div>
     </div>
   );
 };

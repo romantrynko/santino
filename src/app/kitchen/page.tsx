@@ -31,7 +31,7 @@ const KitchenPageContent = () => {
       <BackButton />
 
       <PageHeader
-        containerClassName="h-40 bg-santino-header"
+        containerClassName="h-40 bg-santino"
         textClassName="font-extralight text-white text-[70px] tracking-widest"
       />
       

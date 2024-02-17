@@ -17,7 +17,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
   return (
     <div
       key={item.name}
-      className="flex w-full justify-between font-sans border border-lime-500 p-3 px-2 rounded bg-white opacity-90">
+      className="flex min-h-[70px] w-full items-start justify-between font-sans border-b border-lime-500 p-3 px-2 bg-white opacity-90">
       <div className={cn("flex w-full justify-center flex-col text-[12px] mr-8 font-semibold gap-2", 
         item.variants && 'mr-0'
       )}>
@@ -43,7 +43,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
           </div>
         )}
       </div>
-      {item.price && <div className="flex justify-center items-center gap-3 font-serif">
+      {item.price && <div className="flex gap-3 font-serif">
         {item.weight && <div className="italic">{item.weight}</div>}
         <div className="font-bold">{item.price}</div>
       </div>}

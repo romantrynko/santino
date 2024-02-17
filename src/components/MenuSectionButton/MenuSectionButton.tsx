@@ -7,7 +7,7 @@ type MenuSectionButtonProps = {
   innerContainerClassName?: string;
   textClassName?: string;
   onClick?: (path: string) => void;
-  delay: number;
+  delay?: number;
 };
 
 const MenuSectionButton = ({
@@ -35,7 +35,7 @@ const MenuSectionButton = ({
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div
       className={cn(
-        `flex justify-center items-center bg-amber-950 p-2 rounded-[30px] active:bg-amber-800 active:duration-300 transition duration-200 ease-in ${
+        `flex justify-center items-center bg-gradient-to-r  shadow-md shadow-slate-400 from-zinc-300 to-zinc-600 p-3 rounded-[30px] active:scale-[98%] active:duration-150 transition duration-200 ease-in ${
           show ? 'opacity-100' : 'opacity-0'
         }`,
         containerClassName
@@ -48,7 +48,7 @@ const MenuSectionButton = ({
         )}>
         <div
           className={cn(
-            'text-center text-[24px] font-serif font-light text-amber-100',
+            'text-center text-[24px] font-serif font-light text-slate-100',
             textClassName
           )}>
           {children}
