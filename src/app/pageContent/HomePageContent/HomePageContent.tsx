@@ -1,5 +1,5 @@
+import { PageHeader } from '@/components';
 import MenuSectionButton from '@/components/MenuSectionButton';
-import PageHeader from '@/components/PageHeader';
 import { homePageSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
@@ -22,12 +22,14 @@ const HomePageContent = () => {
 
   return (
     <div
-      className={cn('flex flex-col w-full h-full p-2', {
+      className={cn('flex flex-col h-[85vh] w-full p-2', {
         'w-full': isMobileInPortrait
       })}>
       <PageHeader
-        containerClassName="h-40 bg-santino"
-        textClassName="font-extralight text-white text-[70px] tracking-widest"
+        subtitle="Ресторан на озері"
+        containerClassName="flex flex-1 bg-santino"
+        titleClassName="font-extralight text-white text-[70px] tracking-widest"
+        subtitleClassName='text-[35px] text-white'
       />
       <div className={cn('flex flex-1 flex-col w-full gap-4 mt-2', {})}>
         {homePageSectionButtons.map(({ name, path }, index) => (

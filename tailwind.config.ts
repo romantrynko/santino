@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backdropFilter: {
+        none: 'none',
+        blur: 'blur(10px)'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -18,6 +22,11 @@ const config: Config = {
       }
     }
   },
-  plugins: []
+  variants: {
+    extend: {
+      backdropFilter: ['responsive'], // or other variants
+    },
+  },
+  plugins: [require('@tailwindcss/postcss7-compat')]
 };
 export default config;

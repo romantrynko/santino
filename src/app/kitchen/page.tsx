@@ -1,8 +1,8 @@
 'use client';
 
+import { PageHeader } from '@/components';
 import BackButton from '@/components/BackButton/BackButton';
 import MenuSectionButton from '@/components/MenuSectionButton';
-import PageHeader from '@/components/PageHeader';
 import { kitchenSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
@@ -31,15 +31,16 @@ const KitchenPageContent = () => {
       <BackButton />
 
       <PageHeader
+        title="Кухня"
         containerClassName="h-40 bg-santino"
-        textClassName="font-extralight text-white text-[70px] tracking-widest"
+        titleClassName="font-extralight text-white text-[70px] tracking-widest"
       />
       
-      <div className={cn('flex flex-col w-full h-full gap-3 mt-2', {})}>
+      <div className={cn('flex flex-col w-full h-full gap-4 mt-2', {})}>
         {kitchenSectionButtons.map(({ name, path }, index) => (
           <MenuSectionButton
             key={path}
-            delay={index * 300}
+            delay={index * 150}
             textClassName='text-[18px]'
             onClick={() => handleButtonClick(path)}>
             {name.toUpperCase()}
