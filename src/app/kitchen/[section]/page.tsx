@@ -13,8 +13,6 @@ const AppetizerPage = () => {
 
   const data = KitchenMenuList[section as KitchenMenuSections];
 
-  console.log(section);
-
   const goBack = useCallback(() => {
     router.back();
   }, [router]);
@@ -32,7 +30,7 @@ const AppetizerPage = () => {
         <div className="flex flex-col w-full mb-2 px-2 gap-2">
           {data.map((item) => (
             <MenuItem
-              key={`${item.price}-${item.weight}`}
+              key={`${item.price}-${item.name}`}
               item={item}
             />
           ))}

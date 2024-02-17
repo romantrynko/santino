@@ -2,7 +2,7 @@ import { cn } from '@/utils/utils';
 import React from 'react';
 
 export type IMenuItem = {
-  name: string;
+  name?: string;
   type?: string;
   description?: string;
   weight?: string;
