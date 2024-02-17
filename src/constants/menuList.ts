@@ -316,7 +316,7 @@ export const hotDrinks = [
 ];
 
 export const mangalMenu = [
-  {type: 'М’ЯСО'},
+  { type: 'М’ЯСО' },
   {
     name: 'ШАШЛИК',
     variants: [
@@ -344,7 +344,10 @@ export const mangalMenu = [
     weight: '100',
     price: '180'
   },
-  { name: 'ОВОЧІ ПЕЧЕНІ НА МАНГАЛІ', weight: '250', price: '120' }
+  { type: 'ОВОЧІ ПЕЧЕНІ НА МАНГАЛІ', weight: '250', price: '120' },
+  { type: 'СОУСИ' },
+  { name: 'BBQ, АДЖИКА, ТАР-ТАР, СИРНИЙ, САЦЕБЕЛІ', weight: '50', price: '60' },
+  { name: 'СВІЖОСПЕЧЕНА ЧІАБАТТА', price: '60' }
 ];
 export const homePageSectionButtons = [
   { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
@@ -370,8 +373,7 @@ export const kitchenSectionButtons = [
   },
   { section: 'for_kids', name: 'Для дітей', path: '/kitchen/for_kids' },
   { section: 'hot_drinks', name: 'Гарячі напої', path: '/kitchen/hot_drinks' },
-  { section: 'mangal_menu', name: 'Мангал меню', path: '/kitchen/mangal_menu' },
-  { section: 'souces', name: 'Соуси', path: '/kitchen/souces' }
+  { section: 'mangal_menu', name: 'Мангал меню', path: '/kitchen/mangal_menu' }
 ];
 
 export const barSectionButtons = [
@@ -406,8 +408,7 @@ export enum KitchenMenuSections {
   MainDishes = 'main_dishes',
   ForKids = 'for_kids',
   HotDrinks = 'hot_drinks',
-  MangalMenu = 'mangal_menu',
-  Souces = 'souces'
+  MangalMenu = 'mangal_menu'
 }
 
 export enum BarMenuSections {
@@ -445,8 +446,7 @@ export const KitchenSectionsList = {
   [KitchenMenuSections.MainDishes]: 'Основні страви',
   [KitchenMenuSections.ForKids]: 'Для дітей',
   [KitchenMenuSections.HotDrinks]: 'Гарячі напої',
-  [KitchenMenuSections.MangalMenu]: 'Мангал меню',
-  [KitchenMenuSections.Souces]: 'Соуси'
+  [KitchenMenuSections.MangalMenu]: 'Мангал меню'
 };
 
 export const BarSectionsList = {
@@ -478,8 +478,7 @@ export const KitchenMenuList = {
   [KitchenMenuSections.MainDishes]: mainDishes,
   [KitchenMenuSections.ForKids]: forKids,
   [KitchenMenuSections.HotDrinks]: hotDrinks,
-  [KitchenMenuSections.MangalMenu]: mangalMenu,
-  [KitchenMenuSections.Souces]: []
+  [KitchenMenuSections.MangalMenu]: mangalMenu
 };
 
 export const BarMenuList = {
