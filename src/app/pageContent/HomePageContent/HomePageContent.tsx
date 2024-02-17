@@ -28,8 +28,9 @@ const HomePageContent = () => {
       <PageHeader
         subtitle="Ресторан на озері"
         containerClassName="flex flex-1 bg-santino"
-        titleClassName="font-extralight text-white text-[70px] tracking-widest"
-        subtitleClassName='text-[35px] text-white'
+        titleClassName="font-extralight text-white text-[60px] tracking-widest"
+        subtitleClassName='text-[24px] text-white'
+        menu
       />
       <div className={cn('flex flex-1 flex-col w-full gap-4 mt-2', {})}>
         {homePageSectionButtons.map(({ name, path }, index) => (

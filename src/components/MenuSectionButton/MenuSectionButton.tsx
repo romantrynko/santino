@@ -35,7 +35,7 @@ const MenuSectionButton = ({
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div
       className={cn(
-        `flex justify-center items-center bg-gradient-to-r  shadow-md shadow-slate-600 from-zinc-400 to-zinc-700 p-3 rounded-[30px] active:scale-[98%] active:duration-150 transition duration-200 ease-in ${
+        `flex justify-center items-center bg-gradient-to-tr from-zinc-400 to-zinc-500 shadow-md shadow-slate-300 p-3 rounded-[30px] active:scale-[98%] active:duration-150 transition duration-200 ease-in ${
           show ? 'opacity-100' : 'opacity-0'
         }`,
         containerClassName
@@ -43,7 +43,7 @@ const MenuSectionButton = ({
       onClick={handleClick}>
       <div
         className={cn(
-          'flex justify-center items-center border border-white h-full w-full rounded-[20px] py-6',
+          'bg-gradient-to-bl from-zinc-400 to-zinc-500 flex justify-center items-center border border-white h-full w-full rounded-[20px] py-6',
           innerContainerClassName
         )}>
         <div
