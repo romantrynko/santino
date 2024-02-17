@@ -1,13 +1,13 @@
 'use client';
 
 import { PageHeader } from '@/components';
-import BackButton from '@/components/BackButton/BackButton';
 import MenuSectionButton from '@/components/MenuSectionButton';
 import { barSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
 import { useRouter } from 'next/navigation';
 import React, { useMemo } from 'react';
+import RouteButton from '@/components/RouteButton/RouteButton';
 
 const BarPageContent = () => {
   const { isMobileInPortrait } = useScreenSize();
@@ -16,9 +16,7 @@ const BarPageContent = () => {
 
   const handleButtonClick = useMemo(
     () => (path: string) => {
-      setTimeout(() => {
-        router.push(path);
-      }, 300);
+      router.push(path);
     },
     [router]
   );
@@ -28,11 +26,11 @@ const BarPageContent = () => {
       className={cn('flex flex-col w-full h-full p-2', {
         'w-full': isMobileInPortrait
       })}>
-      <BackButton
+      <RouteButton
         text={'Головна'}
         route={'/'}
       />
-      <BackButton
+      <RouteButton
         text={'Кухня'}
         route={'/kitchen'}
         containerClassName="bottom-[120px] w-14 h-14 right-4 bg-slate-400"

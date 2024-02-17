@@ -6,7 +6,7 @@ type MenuSectionButtonProps = {
   containerClassName?: string;
   innerContainerClassName?: string;
   textClassName?: string;
-  onClick?: (path: string) => void;
+  onClick?: () => void;
   delay?: number;
 };
 
@@ -25,11 +25,11 @@ const MenuSectionButton = ({
     return () => clearTimeout(timer);
   }, [delay]);
 
-  const handleClick: MouseEventHandler<HTMLDivElement> = (event) => {
-    if (onClick) {
-      onClick(event.currentTarget.dataset.path || '');
-    }
-  };
+  // const handleClick: MouseEventHandler<HTMLDivElement> = (event) => {
+  //   if (onClick) {
+  //     onClick(event.currentTarget.dataset.path || '');
+  //   }
+  // };
 
   return (
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
@@ -40,7 +40,7 @@ const MenuSectionButton = ({
         }`,
         containerClassName
       )}
-      onClick={handleClick}>
+      onClick={onClick}>
       <div
         className={cn(
           'bg-gradient-to-bl from-zinc-400 to-zinc-500 flex justify-center items-center border border-white h-full w-full rounded-[20px] py-6',

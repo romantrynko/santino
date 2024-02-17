@@ -13,9 +13,7 @@ const HomePageContent = () => {
 
   const handleButtonClick = useMemo(
     () => (path: string) => {
-      setTimeout(() => {
-        router.push(path);
-      }, 300);
+      router.push(path);
     },
     [router]
   );
@@ -29,7 +27,7 @@ const HomePageContent = () => {
         subtitle="Ресторан на озері"
         containerClassName="flex flex-1 bg-santino"
         titleClassName="font-extralight text-white text-[60px] tracking-widest"
-        subtitleClassName='text-[24px] text-white'
+        subtitleClassName="text-[24px] text-white"
         menu
       />
       <div className={cn('flex flex-1 flex-col w-full gap-4 mt-2', {})}>

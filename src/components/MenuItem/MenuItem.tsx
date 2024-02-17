@@ -18,7 +18,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
     <div
       key={item.name}
       className="flex min-h-[70px] w-full items-start justify-between font-sans border-b border-slate-500 p-3 px-2 bg-white opacity-90">
-      <div className={cn("flex w-full justify-center flex-col text-[12px] mr-8 font-semibold gap-2", 
+      <div className={cn("flex w-full justify-center flex-col text-[14px] mr-8 font-semibold gap-2", 
         item.variants && 'mr-0'
       )}>
         {item.name}

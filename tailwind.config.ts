@@ -24,8 +24,8 @@ const config: Config = {
   },
   variants: {
     extend: {
-      backdropFilter: ['responsive'], // or other variants
-    },
+      backdropFilter: ['responsive'] // or other variants
+    }
   },
   plugins: [require('@tailwindcss/postcss7-compat')]
 };

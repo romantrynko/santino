@@ -126,6 +126,129 @@ export const hotAppetizer: IMenuItem[] = [
   }
 ];
 
+export const soups = [
+  {
+    name: 'БОГРАЧ',
+    weight: '350',
+    price: '160'
+  },
+  {
+    name: 'ЮШКА З БІЛИХ ГРИБІВ З РИСОВОЮ ВЕРМІШЕЛЛЮ',
+    weight: '300',
+    price: '140'
+  },
+  {
+    name: 'БОРЩ ЧЕРВОНИЙ ПОДАЄТЬСЯ З ГРІНКАМИ ТА САЛОМ',
+    weight: '350',
+    price: '140'
+  }
+];
+
+export const mainDishes = [
+  {
+    name: 'ТОМЛЕНА ТЕЛЯТИНА З КАРТОПЛЯНИМ КРЕМОМ ТА ЧЕРІ',
+    weight: '370',
+    price: '320'
+  },
+  {
+    name: 'СВИННА ВИРІЗКА ІЗ ЗАПЕЧЕНОЮ КАРТОПЛЕЮ ТА СОУСОМ ДЕМІГЛАС',
+    weight: '380',
+    price: '340'
+  },
+  {
+    name: 'МЕДАЛЬЙОНИ З СВИННОЇ ВИРІЗКИ З СТРУЧКОВОЮ КВАСОЛЕЮ',
+    weight: '330',
+    price: '360'
+  },
+  {
+    name: 'СТЕЙК З КУРКИ З ОВОЧАМИ У ВЕРШКОВОМУ СОУСІ',
+    weight: '350',
+    price: '290'
+  },
+  {
+    name: 'ФІЛЕ ЛОСОСЯ ПІД ВЕРШКОВО-ІКОРНИМ СОУСОМ',
+    weight: '300',
+    price: '360'
+  },
+  {
+    name: 'ФІЛЕ ДОРАДО З КАБАЧКОМ ТА ЧЕРІ',
+    weight: '300',
+    price: '380'
+  }
+];
+
+export const sideDishes = [
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  }
+];
+
+export const pasta = [
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  }
+];
+
+export const desserts = [
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  }
+];
+
+export const forKids = [
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  },
+  {
+    name: '',
+    weight: '',
+    price: ''
+  }
+];
+
 export const homePageSectionButtons = [
   { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
   { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }

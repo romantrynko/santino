@@ -1,6 +1,6 @@
 'use client';
 
-import BackButton from '@/components/BackButton/BackButton';
+import BackButton from '@/components/RouteButton/RouteButton';
 import MenuItem from '@/components/MenuItem';
 import SectionPageHeader from '@/components/SectionPageHeader/SectionPageHeader';
 import { KitchenMenuList, KitchenMenuSections, KitchenSectionsList } from '@/constants/menuList';

@@ -19,8 +19,12 @@ const RouteButton = ({
 }: RouteButtonProps) => {
   const router = useRouter();
 
+  console.log('RouteButton', route);
+
   const handleButtonClick = useCallback(() => {
-    !onClick ? setTimeout(() => router.push(route || ''), 200) : onClick();
+    console.log('handleButtonClick', route);
+
+    !onClick ? router.push(route || '') : onClick();
   }, [onClick, route, router]);
 
   return (
