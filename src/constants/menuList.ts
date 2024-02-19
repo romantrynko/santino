@@ -544,6 +544,11 @@ export const homePageSectionButtons = [
 ];
 
 export const kitchenSectionButtons = [
+  {
+    section: 'main_dishes',
+    name: 'Основні страви',
+    path: '/kitchen/main_dishes'
+  },
   { section: 'appetizer', name: 'Закуски', path: '/kitchen/appetizer' },
   { section: 'salads', name: 'Салати', path: '/kitchen/salads' },
   { section: 'soups', name: 'Супи', path: '/kitchen/soups' },
@@ -555,42 +560,32 @@ export const kitchenSectionButtons = [
   { section: 'side_dishes', name: 'Гарніри', path: '/kitchen/side_dishes' },
   { section: 'desserts', name: 'Десерти', path: '/kitchen/desserts' },
   { section: 'pasta', name: 'Паста', path: '/kitchen/pasta' },
-  {
-    section: 'main_dishes',
-    name: 'Основні страви',
-    path: '/kitchen/main_dishes'
-  },
   { section: 'for_kids', name: 'Для дітей', path: '/kitchen/for_kids' },
   { section: 'mangal_menu', name: 'Мангал меню', path: '/kitchen/mangal_menu' }
 ];
 
 export const barSectionButtons = [
-  { section: 'hot_drinks', name: 'Гарячі напої', path: '/kitchen/hot_drinks' },
+  { section: 'hot_drinks', name: 'Гарячі напої', path: '/bar/hot_drinks' },
   {
     section: 'strong_alcohol',
     name: 'Міцний алкоголь',
-    path: '/strong_alcohol'
+    path: '/bar/strong_alcohol'
   },
-  { section: 'wine', name: 'Вино', path: '/wine' },
-  { section: 'coctails', name: 'КОКТЕЙЛІ', path: '/coctails' },
-  {
-    section: 'non_alcohol_coctails',
-    name: 'КОКТЕЙЛІ БЕЗАЛКОГОЛЬНІ',
-    path: '/non_alcohol_coctails'
-  },
+  { section: 'wine', name: 'Вино', path: '/bar/wine' },
+  { section: 'cocktails', name: 'КОКТЕЙЛІ', path: '/bar/cocktails' },
   {
     section: 'non_alcohol_drinks',
     name: 'Напої безалкогольні',
-    path: '/non_alcohol_drinks'
+    path: '/bar/non_alcohol_drinks'
   },
-  { section: 'beer', name: 'Пиво', path: '/beer' }
+  { section: 'beer', name: 'Пиво', path: '/bar/beer' }
 ];
 
 export enum KitchenMenuSections {
   Appetizers = 'appetizer',
   Salads = 'salads',
   Soups = 'soups',
-  HotAppetizert = 'hot_appetizer',
+  HotAppetizer = 'hot_appetizer',
   SideDishes = 'side_dishes',
   Desserts = 'desserts',
   Pasta = 'pasta',
@@ -603,8 +598,7 @@ export enum BarMenuSections {
   HotDrinks = 'hot_drinks',
   StrongAlcohol = 'strong_alcohol',
   Wine = 'wine',
-  Coctails = 'coctails',
-  NonAlcoholCoctails = 'non_alcohol_coctails',
+  Cocktails = 'cocktails',
   NonAlcoholDrinks = 'non_alcohol_drinks',
   Beer = 'beer'
 }
@@ -622,7 +616,7 @@ export const KitchenMenuList = {
     name: 'Супи',
     data: soups
   },
-  [KitchenMenuSections.HotAppetizert]: {
+  [KitchenMenuSections.HotAppetizer]: {
     name: 'Гарячі закуски',
     data: hotAppetizer
   },
@@ -665,13 +659,9 @@ export const BarMenuList = {
     name: 'Вино',
     data: wines
   },
-  [BarMenuSections.Coctails]: {
+  [BarMenuSections.Cocktails]: {
     name: 'Коктейлі',
     data: cocktails
-  },
-  [BarMenuSections.NonAlcoholCoctails]: {
-    name: 'Коктейлі безалкогольні',
-    data: []
   },
   [BarMenuSections.NonAlcoholDrinks]: {
     name: 'Напої безалкогольні',

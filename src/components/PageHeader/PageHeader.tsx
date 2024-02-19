@@ -24,7 +24,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   return (
     <div
       className={cn(
-        'w-full bg-cover bg-center flex justify-center items-center h-20 p-3 rounded-[30px] opacity-75',
+        'w-full bg-cover bg-center flex justify-center items-center h-20 p-3  opacity-90',
         containerClassName
       )}
       {...props}>

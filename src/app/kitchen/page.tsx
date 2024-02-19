@@ -14,7 +14,7 @@ const KitchenPageContent = () => {
 
   return (
     <div
-      className={cn('flex flex-col w-full h-full p-2', {
+      className={cn('flex flex-col w-full h-full', {
         'w-full': isMobileInPortrait
       })}>
       <RouteButton
@@ -24,20 +24,22 @@ const KitchenPageContent = () => {
       <RouteButton
         text={'Бар'}
         route={'/bar'}
-        containerClassName="bottom-[120px] w-14 h-14 right-4 bg-slate-400"
+        containerClassName="bottom-[100px] w-14 h-14 right-4 bg-slate-400"
       />
 
       <PageHeader
         title="Кухня"
-        containerClassName="h-40 bg-santino"
+        containerClassName="h-40 fixed bg-santino shadow-2xl shadow-slate-800"
         titleClassName="font-extralight text-white text-[70px] tracking-widest"
       />
 
-      <div className={cn('flex flex-col w-full h-full gap-4 mt-2', {})}>
+      <div
+        className={cn('flex flex-col w-full h-full gap-4 mt-[180px] p-2', {})}>
         {kitchenSectionButtons.map(({ name, section }, index) => (
           <Link
             href={`/kitchen/${section}`}
-            key={section}>
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+            key={index}>
             <MenuSectionButton
               delay={index * 150}
               textClassName="text-[18px]">

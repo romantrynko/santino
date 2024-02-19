@@ -26,9 +26,10 @@ const MenuSectionPageContent = ({
 
       <div className="flex pb-20 w-full mt-[130px]">
         <div className="flex flex-col w-full mb-2 px-2">
-          {data.map((item) => (
+          {data?.map((item, index) => (
             <MenuItem
-              key={`${item.price}-${item.name}`}
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+              key={index}
               item={item}
             />
           ))}

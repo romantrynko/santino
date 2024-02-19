@@ -16,12 +16,12 @@ const SectionPageHeader = ({
 }: SectionPageHeaderProps) => (
   <div
     className={cn(
-      'flex fixed justify-center w-full py-6 px-6 bg-gradient-to-r from-zinc-400 to-zinc-700 z-10 shadow-md shadow-slate-400',
+      'flex fixed justify-center w-full py-6 px-6 bg-gradient-to-tr from-zinc-300 to-zinc-500 z-10 shadow-md shadow-slate-400',
       containerClassName
     )}>
     <div
       className={cn(
-        'flex justify-center items-center w-full border py-3',
+        'flex justify-center items-center w-full border py-3 rounded',
         innerContainerClassName
       )}>
       <div

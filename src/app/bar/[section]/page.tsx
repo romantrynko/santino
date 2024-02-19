@@ -1,12 +1,33 @@
 'use client';
 
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import React, { useMemo } from 'react';
 import { BarMenuList } from '@/constants/menuList';
 import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
+import RouteButton from '@/components/RouteButton';
 
-const MenuSectionPage = () => {
+const BarMenuPage = () => {
   const { section } = useParams();
+  const pathname = usePathname();
+
+  const buttonProps = useMemo(() => {
+    switch (pathname) {
+      case '/bar/cocktails':
+        return { text: 'Десерти', route: '/kitchen/desserts' };
+      case '/bar/wine':
+        return { text: 'Мангал меню', route: '/kitchen/mangal_menu' };
+      case '/bar/beer':
+        return { text: 'Мангал меню', route: '/kitchen/mangal_menu' };
+      case '/bar/strong_alcohol':
+        return { text: 'Закуски', route: '/kitchen/appetizer' };
+      case '/bar/hot_drinks':
+        return { text: 'Десерти', route: '/kitchen/desserts' };
+      case '/bar/soft_drinks':
+        return { text: 'Основні страви', route: '/kitchen/main_dishes' };
+      default:
+        return;
+    }
+  }, [pathname]);
 
   const data = useMemo(
     () => BarMenuList[section as keyof typeof BarMenuList]?.data,
@@ -19,11 +40,26 @@ const MenuSectionPage = () => {
   );
 
   return (
-    <MenuSectionPageContent
-      data={data}
-      title={title}
-    />
+    <>
+      {buttonProps && (
+        <RouteButton
+          text={buttonProps.text}
+          route={buttonProps.route}
+          containerClassName="bottom-4 w-auto px-2 right-[120px] bg-slate-400"
+        />
+      )}
+      <RouteButton
+        text={'Головна'}
+        route={'/'}
+        containerClassName="bottom-4 w-20 left-4 bg-slate-400"
+      />
+
+      <MenuSectionPageContent
+        data={data}
+        title={title}
+      />
+    </>
   );
 };
 
-export default MenuSectionPage;
+export default BarMenuPage;

@@ -28,18 +28,21 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
         {item.type && (
           <div className="text-[18px] text-amber-700">{item.type}</div>
         )}
-        {item.country && ( 
-          <div className="text-[18px] font-light italic text-amber-700">{item.country}</div>
+        {item.country && (
+          <div className="text-[18px] font-light italic text-amber-700">
+            {item.country}
+          </div>
         )}
-        <div className='flex w-full items-center mb-4'>{item.name}</div>
+        <div className="flex w-full items-center mb-4">{item.name}</div>
         {item.description && (
           <div className="text-[12px] font-light">{item.description}</div>
         )}
         {item.variants && (
           <div className="flex flex-col w-full">
-            {item.variants.map((variant) => (
+            {item.variants.map((variant, index) => (
               <div
-                key={variant.name}
+                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                key={index}
                 className="flex w-full items-center justify-between font-sans mb-2">
                 {variant.name}
                 <div className="flex justify-center items-center gap-3 font-serif text-[16px]">
