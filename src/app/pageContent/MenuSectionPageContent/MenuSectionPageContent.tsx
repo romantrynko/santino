@@ -24,7 +24,7 @@ const MenuSectionPageContent = ({
 
       <SectionPageHeader title={title} />
 
-      <div className="absolute top-[130px] z-1 pb-20">
+      <div className="flex pb-20 w-full mt-[130px]">
         <div className="flex flex-col w-full mb-2 px-2">
           {data.map((item) => (
             <MenuItem

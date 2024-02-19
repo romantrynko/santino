@@ -12,16 +12,7 @@ import Link from 'next/link';
 
 const BarPageContent = () => {
   const { isMobileInPortrait } = useScreenSize();
-
-  const router = useRouter();
-
-  const handleButtonClick = useMemo(
-    () => (path: string) => {
-      router.push(path);
-    },
-    [router]
-  );
-
+  
   return (
     <div
       className={cn('flex flex-col w-full h-full p-2', {

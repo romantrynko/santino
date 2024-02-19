@@ -372,6 +372,55 @@ export const mangalMenu = [
   { name: 'СВІЖОСПЕЧЕНА ЧІАБАТТА', price: '60' }
 ];
 
+export const nonAlcoholDrinks = [
+  {
+    name: 'ПЕПСІКОЛА скло',
+    weight: '250',
+    price: '50'
+  },
+  {
+    name: 'ФАНТА',
+    weight: '330',
+    price: '50'
+  },
+  {
+    name: 'СПРАЙТ',
+    weight: '330',
+    price: '50'
+  },
+  {
+    name: 'МОРШИНСЬКА СГАЗ',
+    weight: '330',
+    price: '60'
+  },
+  { name: 'МОРШИНСЬКА НГАЗ', weight: '330', price: '60' },
+  {
+    name: 'БОРЖОМІ',
+    weight: '500',
+    price: '110'
+  },
+  {
+    name: 'ПОЛЯНА КВАСОВА',
+    weight: '500',
+    price: '70'
+  },
+  {
+    name: 'СІК В АСОРТИМЕНТІ',
+    weight: '250',
+    price: '35'
+  },
+  {
+    name: 'УЗВАР',
+    weight: '250',
+    price: '30'
+  },
+  {
+    name: 'ЛИМОНАД',
+    weight: '250',
+    price: '40'
+  }
+];
+
 export const homePageSectionButtons = [
   { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
   { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }
@@ -509,7 +558,7 @@ export const BarMenuList = {
   },
   [BarMenuSections.NonAlcoholDrinks]: {
     name: 'Напої безалкогольні',
-    data: []
+    data: nonAlcoholDrinks,
   },
   [BarMenuSections.Beer]: {
     name: 'Пиво',
