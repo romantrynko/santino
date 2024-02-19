@@ -1,17 +1,17 @@
 'use client';
 
-import { KitchenMenuList } from '@/constants/menuList';
 import { useParams } from 'next/navigation';
 import React, { useMemo } from 'react';
+import { BarMenuList } from '@/constants/menuList';
 import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 
 const MenuSectionPage = () => {
   const { section } = useParams();
 
-  const data = KitchenMenuList[section as keyof typeof KitchenMenuList]?.data;
+  const data = BarMenuList[section as keyof typeof BarMenuList]?.data;
 
   const title = useMemo(() => {
-    return KitchenMenuList[section as keyof typeof KitchenMenuList].name;
+    return BarMenuList[section as keyof typeof BarMenuList].name;
   }, [section]);
 
   return (

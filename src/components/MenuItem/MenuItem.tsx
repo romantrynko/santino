@@ -25,9 +25,9 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
           item.variants && 'mr-0'
         )}>
         {item.type && (
-          <div className="text-[18px] text-orange-400">{item.type}</div>
+          <div className="text-[18px] text-amber-700">{item.type}</div>
         )}
-        {item.name}
+        <div className='flex w-full items-center mb-4'>{item.name}</div>
         {item.description && (
           <div className="text-[12px] font-light">{item.description}</div>
         )}

@@ -43,7 +43,7 @@ const MenuSectionButton = ({
       onClick={onClick}>
       <div
         className={cn(
-          'bg-gradient-to-bl from-zinc-400 to-zinc-500 flex justify-center items-center border border-white h-full w-full rounded-[20px] py-6',
+          'bg-gradient-to-bl from-zinc-400 to-zinc-500 flex justify-center items-center  h-full w-full rounded-[20px] py-6',
           innerContainerClassName
         )}>
         <div
