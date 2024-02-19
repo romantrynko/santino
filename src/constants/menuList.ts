@@ -418,9 +418,64 @@ export const nonAlcoholDrinks = [
     name: 'ЛИМОНАД',
     weight: '250',
     price: '40'
-  }
+  },
+  { type: 'Cвіжі соки' },
+  { name: 'МОРКВЯНИЙ', weight: '200', price: '80' },
+  { name: 'ЯБЛУЧНИЙ', weight: '200', price: '80' },
+  { name: 'АПЕЛЬСИНОВИЙ', weight: '200', price: '120' },
+  { name: 'ГРЕЙПФРУТОВИЙ', weight: '200', price: '120' },
+  { type: 'Молочні коктейлі' },
+  { name: 'КЛАСИЧНИЙ', weight: '300', price: '70' },
+  { name: 'БАНАНОВИЙ', weight: '300', price: '85' },
+  { name: 'ШОКОЛАДНИЙ', weight: '300', price: '85' }
 ];
 
+export const strongAlcohol = [
+  { type: 'ГОРІЛКА' },
+  { name: 'ПЕРЛОВА', weight: '50', price: '40' },
+  { name: 'ФІНЛЯНДІЯ', weight: '50', price: '40' },
+  { name: 'КОЗАЦЬКА РАДА', weight: '50', price: '65' },
+  { name: 'ФІНЛЯНДІЯ ЖУРАВЛИНА', weight: '50', price: '65' },
+  { name: 'ГРЕЙ ГУЗ', weight: '50', price: '105' },
+  { type: 'ВІСКІ' },
+  { name: 'ДЖЕЙМСОН', weight: '50', price: '115' },
+  { name: 'ДЖЕК ДЕНІАЛС', weight: '50', price: '120' },
+  { name: 'ДЖЕК ДЕНІАЛС МЕДОВИЙ', weight: '50', price: '130' },
+  { name: 'ГЛЕНМОРАНЖИ', weight: '50', price: '275' },
+  { name: 'БУЛЕТ БУРБОН', weight: '50', price: '160' },
+  { type: 'КОНЬЯК' },
+  { name: 'МАРТЕЛЬ VS', weight: '50', price: '215' },
+  { name: 'ХЕНЕССІ VSOP', weight: '50', price: '390' },
+  { type: 'ТЕКІЛА' },
+  { name: 'ЕСПОЛОН БІЛА', weight: '50', price: '95' },
+  { name: 'ЕСПОЛОН ЗОЛОТА', weight: '50', price: '105' },
+  { type: 'РОМ' },
+  {
+    name: 'КАПІТАН МОРГАН',
+    variants: [
+      { name: ' - БІЛИЙ', weight: '50', price: '75' },
+      { name: ' - ЧОРНИЙ', weight: '50', price: '75' },
+      { name: ' - ЗОЛОТИЙ', weight: '50', price: '75' }
+    ]
+  },
+  { type: 'БРЕНДІ' },
+  { name: 'МЕТАКСА 5*', weight: '50', price: '90' },
+  { name: 'ЗАКАРПАТСЬКИЙ', weight: '50', price: '65' },
+  { name: 'СТ КАХЕТІ 3*', weight: '50', price: '70' },
+  { type: 'ЛІКЕР' },
+  { name: 'ЛІМОНЧЕЛЛО', weight: '50', price: '45' },
+  { name: 'БЕЙЛІС', weight: '50', price: '90' },
+  { type: 'ГІРКІ НАСТОЯНКИ' },
+  { name: 'БЕХЕРІВКА', weight: '50', price: '70' },
+  { name: 'ЄГЕРМАЙСТЕР', weight: '50', price: '90' },
+  { name: 'САМБУКА', weight: '50', price: '90' },
+  { name: 'АПЕРОЛЬ', weight: '50', price: '85' },
+  { type: 'ДЖИН' },
+  { name: 'БІФІТЕР', weight: '50', price: '85' },
+  { type: 'ВЕРМУТ' },
+  { name: 'МАРТІНІ Б’ЯНКО', weight: '50', price: '45' },
+  { name: 'МАРТІНІ РОССО', weight: '50', price: '45' }
+];
 export const homePageSectionButtons = [
   { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
   { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }
@@ -542,7 +597,7 @@ export const BarMenuList = {
   },
   [BarMenuSections.StrongAlcohol]: {
     name: 'Міцний алкоголь',
-    data: []
+    data: strongAlcohol
   },
   [BarMenuSections.Wine]: {
     name: 'Вино',
@@ -558,7 +613,7 @@ export const BarMenuList = {
   },
   [BarMenuSections.NonAlcoholDrinks]: {
     name: 'Напої безалкогольні',
-    data: nonAlcoholDrinks,
+    data: nonAlcoholDrinks
   },
   [BarMenuSections.Beer]: {
     name: 'Пиво',
