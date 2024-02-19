@@ -4,6 +4,7 @@ import React from 'react';
 export type IMenuItem = {
   name?: string;
   type?: string;
+  country?: string;
   description?: string;
   weight?: string;
   price?: string;
@@ -26,6 +27,9 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
         )}>
         {item.type && (
           <div className="text-[18px] text-amber-700">{item.type}</div>
+        )}
+        {item.country && ( 
+          <div className="text-[18px] font-light italic text-amber-700">{item.country}</div>
         )}
         <div className='flex w-full items-center mb-4'>{item.name}</div>
         {item.description && (

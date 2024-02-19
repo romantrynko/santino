@@ -476,6 +476,33 @@ export const strongAlcohol = [
   { name: 'МАРТІНІ Б’ЯНКО', weight: '50', price: '45' },
   { name: 'МАРТІНІ РОССО', weight: '50', price: '45' }
 ];
+
+export const wines = [
+  { type: 'ШАМПАНСЬКЕ' },
+  { name: 'МОЕТ ШАНДОН', weight: '750', price: '3400' },
+  { type: 'ІГРИСТІ' },
+  { name: 'ПРОСЕККО ЕКСТРА ДРАЙ', weight: '750', price: '450' },
+  { name: 'МАРТІНІ АСТІ', weight: '750', price: '790' },
+  { name: 'ФРАГОЛІНО БІЛЕ/ЧЕРВОНЕ', weight: '750', price: '390' },
+  { type: 'ВИНО' },
+  { country: 'УКРАЇНА' },
+  { name: 'МЕРЛО', weight: '150', price: '105' },
+  { name: 'ШАРДОНЕ', weight: '150', price: '105' },
+  { country: 'ГРУЗІЯ' },
+  { name: 'АЛАЗАНСЬКА ДОЛИНА ЧЕРВОНЕ', weight: '150', price: '90' },
+  { name: 'АЛАЗАНСЬКА ДОЛИНА БІЛЕ', weight: '150', price: '90' },
+  { country: 'ФРАНЦІЯ' },
+  { name: 'БОРДО', weight: '150', price: '220' },
+  { name: 'ШАБЛІ', weight: '150', price: '330' },
+  { name: 'РОЗЕ ДЕ АНЖУ', weight: '150', price: '110' },
+  { country: 'ІТАЛІЯ' },
+  { name: 'КЯНТІ КЛАСІКО', weight: '150', price: '150' },
+  { name: 'ПІНО ГРІДЖІО', weight: '150', price: '130' },
+  { country: 'НОВА ЗЕЛАНДІЯ' },
+  { name: 'СОВІНЬЙОН БЛАН', weight: '150', price: '190' },
+  { name: 'ПІНО НУАР', weight: '150', price: '180' }
+];
+
 export const homePageSectionButtons = [
   { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
   { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }
@@ -601,7 +628,7 @@ export const BarMenuList = {
   },
   [BarMenuSections.Wine]: {
     name: 'Вино',
-    data: []
+    data: wines
   },
   [BarMenuSections.Coctails]: {
     name: 'Коктейлі',
