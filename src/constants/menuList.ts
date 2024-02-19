@@ -503,6 +503,41 @@ export const wines = [
   { name: 'ПІНО НУАР', weight: '150', price: '180' }
 ];
 
+export const beer = [
+  { name: 'МИКУЛИНЕЦЬКЕ РОЗЛИВНЕ', weight: '400', price: '70' },
+  { type: 'ПЛЯШКОВЕ:' },
+  { name: 'КРОНЕНСБУРГ БЛАНШ', weight: '500', price: '100' },
+  { name: 'ГРІНБЕРГЕН СВІТЛЕ/ ТЕМНЕ', weight: '300', price: '90' },
+  { name: 'ХУГАРДЕН', weight: '330', price: '120' },
+  { name: 'ЛЕФФЕ БРУНЕ', weight: '330', price: '120' },
+  { type: 'БЕЗАЛКОГОЛЬНЕ:' },
+  { name: 'КАРЛСБЕРГ', price: '85' },
+  { type: 'СЕТ ПИВНИЙ:' },
+  {
+    name: 'бастурма, суджук, сир копчений, начоси',
+    weight: '180',
+    price: '250'
+  }
+];
+
+export const cocktails = [
+  { type: 'КОКТЕЙЛІ КЛАСИЧНІ' },
+  { name: 'МОХІТО ( КЛАСИЧНИЙ/ПОЛУНИЧНИЙ)', weight: '250', price: '140' },
+  { name: 'МАЙ ТАЙ', weight: '250', price: '185' },
+  { name: 'СІК ДЖУНГЛІВ', weight: '270', price: '170' },
+  { name: 'ЛОНГ АЙЛЕНД', weight: '250', price: '185' },
+  { name: 'АПЕРОЛЬ ШПРІТЗ', weight: '200', price: '165' },
+  { name: 'ТАБЛЕРОН', weight: '200', price: '195' },
+  { name: 'ВІСКІ САУЕР', weight: '110', price: '145' },
+  { name: 'ТЕКІЛА САУЕР', weight: '110', price: '145' },
+  { name: 'КАМОЛІЯ САУЕР', weight: '110', price: '175' },
+  { name: 'НЕГРОНІ', weight: '90', price: '189' },
+  { name: 'ДЖИН ТОНІК КЛАСИЧНИЙ/ЯГІДНИЙ', weight: '200', price: '140' },
+  { type: 'КОКТЕЙЛІ БЕЗАЛКОГОЛЬНІ' },
+  { name: 'МОХІТО', weight: '250', price: '95' },
+  { name: 'СОЛОДКА ВАТА', weight: '110', price: '95' }
+];
+
 export const homePageSectionButtons = [
   { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
   { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }
@@ -632,7 +667,7 @@ export const BarMenuList = {
   },
   [BarMenuSections.Coctails]: {
     name: 'Коктейлі',
-    data: []
+    data: cocktails
   },
   [BarMenuSections.NonAlcoholCoctails]: {
     name: 'Коктейлі безалкогольні',
@@ -644,6 +679,6 @@ export const BarMenuList = {
   },
   [BarMenuSections.Beer]: {
     name: 'Пиво',
-    data: []
+    data: beer
   }
 };

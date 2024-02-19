@@ -8,11 +8,15 @@ import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 const MenuSectionPage = () => {
   const { section } = useParams();
 
-  const data = KitchenMenuList[section as keyof typeof KitchenMenuList]?.data;
+  const data = useMemo(
+    () => KitchenMenuList[section as keyof typeof KitchenMenuList]?.data,
+    [section]
+  );
 
-  const title = useMemo(() => {
-    return KitchenMenuList[section as keyof typeof KitchenMenuList].name;
-  }, [section]);
+  const title = useMemo(
+    () => KitchenMenuList[section as keyof typeof KitchenMenuList].name,
+    [section]
+  );
 
   return (
     <MenuSectionPageContent

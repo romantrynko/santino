@@ -8,11 +8,15 @@ import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 const MenuSectionPage = () => {
   const { section } = useParams();
 
-  const data = BarMenuList[section as keyof typeof BarMenuList]?.data;
+  const data = useMemo(
+    () => BarMenuList[section as keyof typeof BarMenuList]?.data,
+    [section]
+  );
 
-  const title = useMemo(() => {
-    return BarMenuList[section as keyof typeof BarMenuList].name;
-  }, [section]);
+  const title = useMemo(
+    () => BarMenuList[section as keyof typeof BarMenuList].name,
+    [section]
+  );
 
   return (
     <MenuSectionPageContent
