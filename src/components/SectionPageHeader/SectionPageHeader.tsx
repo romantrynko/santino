@@ -16,10 +16,10 @@ const SectionPageHeader = ({
 }: SectionPageHeaderProps) => (
   <div
     className={cn(
-      'flex fixed w-full p-4 h-[120px] z-10 shadow-md shadow-slate-400 justify-between',
+      'flex fixed w-full p-4 h-[120px] z-10 shadow-md shadow-slate-400 justify-between bg-dark-green',
       containerClassName
     )}>
-    <div className="flex w-2/6 bg-logo-small-black bg-contain bg-no-repeat" />
+    <div className="flex w-2/6 bg-logo-small-yellow bg-contain bg-no-repeat" />
 
     <div
       className={cn(
@@ -28,7 +28,7 @@ const SectionPageHeader = ({
       )}>
       <div
         className={cn(
-          'text-[26px] tracking-widest',
+          'text-[26px] tracking-widest text-light-green',
           textClassName
         )}>
         {title}

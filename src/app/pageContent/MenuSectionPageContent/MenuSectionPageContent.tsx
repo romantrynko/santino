@@ -16,15 +16,15 @@ const MenuSectionPageContent = ({
   }, [router]);
 
   return (
-    <div className="flex relative h-screen w-full flex-col gap-3 mb-10">
+    <div className="flex relative h-min-[100vh] w-full flex-col gap-3 ">
       <RouteButton
         text={'Назад'}
         onClick={goBack}
       />
 
-      <SectionPageHeader title={title} containerClassName='bg-beige'/>
+      <SectionPageHeader title={title} />
 
-      <div className="flex pb-20 w-full mt-[130px] bg-bg-leaves bg-contain">
+      <div className="flex h-min-[80vh] h-max-content pb-20 w-full mt-[130px] bg-bg-leaves bg-contain bg-fixed">
         <div className="flex flex-col w-full mb-2 px-2">
           {data?.map((item, index) => (
             <MenuItem

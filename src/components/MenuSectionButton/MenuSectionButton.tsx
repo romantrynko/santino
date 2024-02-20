@@ -19,7 +19,6 @@ const MenuSectionButton = ({
   delay,
 }: MenuSectionButtonProps) => {
   const [show, setShow] = useState(false);
-  console.log(children);
   
   const isMangalButton = useMemo(() => children === 'МАНГАЛ МЕНЮ', [children]);
 

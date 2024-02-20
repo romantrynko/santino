@@ -48,7 +48,8 @@ const config: Config = {
   },
   variants: {
     extend: {
-      backdropFilter: ['responsive'] // or other variants
+      backdropFilter: ['responsive'], // or other variants
+      backgroundAttachment: ['responsive'],
     }
   },
 

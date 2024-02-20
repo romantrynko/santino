@@ -40,7 +40,7 @@ const BarMenuPage = () => {
   );
 
   return (
-    <div className='font-kurale'>
+    <div className='flex font-kurale h-auto'>
       {buttonProps && (
         <RouteButton
           text={buttonProps.text}

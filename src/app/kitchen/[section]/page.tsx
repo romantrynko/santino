@@ -46,8 +46,6 @@ const KitchenMenuPage = () => {
     [section]
   );
 
-  console.log(title);
-
   return (
     <div className='font-kurale bg-beige'>
       {buttonProps && (
