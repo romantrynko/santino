@@ -40,25 +40,25 @@ const BarMenuPage = () => {
   );
 
   return (
-    <>
+    <div className='font-kurale'>
       {buttonProps && (
         <RouteButton
           text={buttonProps.text}
           route={buttonProps.route}
-          containerClassName="bottom-4 w-auto px-2 right-[120px] bg-slate-400"
+          containerClassName="bottom-4 w-auto px-2 right-[120px]"
         />
       )}
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName="bottom-4 w-20 left-4 bg-slate-400"
+        containerClassName="bottom-4 w-20 left-4"
       />
 
       <MenuSectionPageContent
         data={data}
         title={title}
       />
-    </>
+    </div>
   );
 };
 

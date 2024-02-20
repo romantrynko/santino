@@ -19,7 +19,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
   return (
     <div
       key={item.name}
-      className="flex min-h-[50px] w-full items-start justify-between font-sans border-slate-500 p-3 px-2 opacity-90">
+      className="flex min-h-[50px] w-full items-start justify-between  border-slate-500 p-3 px-2 opacity-90">
       <div
         className={cn(
           'flex w-full justify-center flex-col text-[14px] mr-8 font-semibold ',
@@ -43,9 +43,9 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
               <div
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={index}
-                className="flex w-full items-center justify-between font-sans mb-2">
+                className="flex w-full items-center justify-between  mb-2">
                 {variant.name}
-                <div className="flex justify-center items-center gap-3 font-serif text-[16px]">
+                <div className="flex justify-center items-center gap-3  text-[16px]">
                   <div className="font-light italic">{variant.weight}</div>
                   <div className="font-bold">{variant.price}</div>
                 </div>
@@ -55,7 +55,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
         )}
       </div>
       {item.price && (
-        <div className="flex gap-3 font-serif">
+        <div className="flex gap-3 ">
           {item.weight && <div className="italic">{item.weight}</div>}
           <div className="font-bold">{item.price}</div>
         </div>

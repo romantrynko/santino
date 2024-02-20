@@ -10,7 +10,6 @@ import path from 'path';
 const KitchenMenuPage = () => {
   const { section } = useParams();
   const pathname = usePathname();
-  console.log('pathname', pathname);
 
   const buttonProps = useMemo(() => {
     switch (pathname) {
@@ -50,32 +49,32 @@ const KitchenMenuPage = () => {
   console.log(title);
 
   return (
-    <>
+    <div className='font-kurale bg-beige'>
       {buttonProps && (
         <RouteButton
           text={buttonProps.text}
           route={buttonProps.route}
-          containerClassName="bottom-4 w-auto px-2 right-[120px] bg-slate-400"
+          containerClassName="bottom-4 w-auto px-2 right-[120px]"
         />
       )}
       {pathname === '/kitchen/hot_appetizer' && (
         <RouteButton
           text={'Пиво'}
           route={'/bar/beer'}
-          containerClassName="bottom-4 w-auto px-2 right-[200px] bg-slate-400"
+          containerClassName="bottom-4 w-auto px-2 right-[200px]"
         />
       )}
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName="bottom-4 w-20 left-4 bg-slate-400"
+        containerClassName="bottom-4 w-20 left-4"
       />
 
       <MenuSectionPageContent
         data={data}
         title={title}
       />
-    </>
+    </div>
   );
 };
 

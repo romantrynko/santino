@@ -22,9 +22,9 @@ const MenuSectionPageContent = ({
         onClick={goBack}
       />
 
-      <SectionPageHeader title={title} />
+      <SectionPageHeader title={title} containerClassName='bg-beige'/>
 
-      <div className="flex pb-20 w-full mt-[130px]">
+      <div className="flex pb-20 w-full mt-[130px] bg-bg-leaves bg-contain">
         <div className="flex flex-col w-full mb-2 px-2">
           {data?.map((item, index) => (
             <MenuItem

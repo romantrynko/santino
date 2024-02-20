@@ -1,5 +1,5 @@
-import { PageHeader } from '@/components';
 import MenuSectionButton from '@/components/MenuSectionButton';
+import PageHeader from '@/components/PageHeader';
 import { homePageSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
@@ -20,24 +20,19 @@ const HomePageContent = () => {
 
   return (
     <div
-      className={cn('flex flex-col h-[85vh] w-full p-2', {
+      className={cn('flex flex-col h-[86vh] w-full', {
         'w-full': isMobileInPortrait
       })}>
-      <PageHeader
-        subtitle="Ресторан на озері"
-        containerClassName="flex flex-1 bg-santino opacity-85"
-        titleClassName="font-extralight text-white text-[60px] tracking-widest"
-        subtitleClassName="text-[24px] text-white"
-        menu
-      />
-      <div className={cn('flex flex-1 flex-col w-full gap-4 mt-2', {})}>
+      <PageHeader containerClassName="flex bg-logo-small-green" />
+      <div className={cn('flex z-10 flex-1 flex-col w-full gap-4 mt-2 bg-white bg-cover bg-center', {})}>
         {homePageSectionButtons.map(({ name, path }, index) => (
           <MenuSectionButton
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             delay={index * 300}
-            containerClassName={cn('flex-1')}
-            textClassName="text-[34px] font-serif font-light"
+            containerClassName={'flex-1 text-dark-green p-5'}
+            innerContainerClassName='border border-dark-green rounded'
+            textClassName="text-[34px]"
             onClick={() => handleButtonClick(path)}>
             {name}
           </MenuSectionButton>

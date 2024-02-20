@@ -1,5 +1,5 @@
 import { cn } from '@/utils/utils';
-import React, { MouseEventHandler, useEffect, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useMemo, useState } from 'react';
 
 type MenuSectionButtonProps = {
   children: React.ReactNode;
@@ -19,23 +19,20 @@ const MenuSectionButton = ({
   delay,
 }: MenuSectionButtonProps) => {
   const [show, setShow] = useState(false);
+  console.log(children);
+  
+  const isMangalButton = useMemo(() => children === 'МАНГАЛ МЕНЮ', [children]);
 
   useEffect(() => {
     const timer = setTimeout(() => setShow(true), delay);
     return () => clearTimeout(timer);
   }, [delay]);
 
-  // const handleClick: MouseEventHandler<HTMLDivElement> = (event) => {
-  //   if (onClick) {
-  //     onClick(event.currentTarget.dataset.path || '');
-  //   }
-  // };
-
   return (
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div
       className={cn(
-        `flex justify-center items-center bg-gradient-to-tr from-zinc-400 to-zinc-500 shadow-md shadow-slate-300 p-3 rounded-[30px] active:scale-[98%] active:duration-150 transition duration-200 ease-in ${
+        `flex justify-center items-center active:scale-[98%] active:duration-150 transition duration-200 ease-in ${
           show ? 'opacity-100' : 'opacity-0'
         }`,
         containerClassName
@@ -43,12 +40,13 @@ const MenuSectionButton = ({
       onClick={onClick}>
       <div
         className={cn(
-          'bg-gradient-to-bl from-zinc-400 to-zinc-500 flex justify-center items-center  h-full w-full rounded-[20px] py-6',
+          'flex justify-center items-center  h-full w-full py-4',
           innerContainerClassName
         )}>
         <div
           className={cn(
-            'text-center text-[24px] font-serif font-light text-slate-100',
+            'text-center text-[24px] font-light',
+            isMangalButton ? 'text-beige bg-dark-green px-5 rounded' :
             textClassName
           )}>
           {children}

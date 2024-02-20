@@ -544,6 +544,7 @@ export const homePageSectionButtons = [
 ];
 
 export const kitchenSectionButtons = [
+  { section: 'mangal_menu', name: 'Мангал меню', path: '/kitchen/mangal_menu' },
   {
     section: 'main_dishes',
     name: 'Основні страви',
@@ -560,8 +561,7 @@ export const kitchenSectionButtons = [
   { section: 'side_dishes', name: 'Гарніри', path: '/kitchen/side_dishes' },
   { section: 'desserts', name: 'Десерти', path: '/kitchen/desserts' },
   { section: 'pasta', name: 'Паста', path: '/kitchen/pasta' },
-  { section: 'for_kids', name: 'Для дітей', path: '/kitchen/for_kids' },
-  { section: 'mangal_menu', name: 'Мангал меню', path: '/kitchen/mangal_menu' }
+  { section: 'for_kids', name: 'Для дітей', path: '/kitchen/for_kids' }
 ];
 
 export const barSectionButtons = [

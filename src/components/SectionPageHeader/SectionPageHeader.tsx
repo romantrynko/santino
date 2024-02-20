@@ -16,17 +16,19 @@ const SectionPageHeader = ({
 }: SectionPageHeaderProps) => (
   <div
     className={cn(
-      'flex fixed justify-center w-full py-6 px-6 bg-gradient-to-tr from-zinc-300 to-zinc-500 z-10 shadow-md shadow-slate-400',
+      'flex fixed w-full p-4 h-[120px] z-10 shadow-md shadow-slate-400 justify-between',
       containerClassName
     )}>
+    <div className="flex w-2/6 bg-logo-small-black bg-contain bg-no-repeat" />
+
     <div
       className={cn(
-        'flex justify-center items-center w-full border py-3 rounded',
+        'flex w-4/6 justify-end items-center',
         innerContainerClassName
       )}>
       <div
         className={cn(
-          'text-[28px] text-white font-serif tracking-widest',
+          'text-[26px] tracking-widest',
           textClassName
         )}>
         {title}

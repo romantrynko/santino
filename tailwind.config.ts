@@ -7,6 +7,19 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
+    fontFamily: {
+      'lora-italic': ['Lora-Italic', 'sans-serif'],
+      lora: ['Lora', 'sans-serif'],
+      kurale: ['Kurale', 'sans']
+    },
+    colors: {
+      'light-green': '#A6BF9F',
+      'dark-green': '#56694A',
+      yellow: '#FDD549',
+      rose: '#EBB8B4',
+      'light-blue': '#d3f3f5',
+      beige: '#FFFBF4'
+    },
     extend: {
       backdropFilter: {
         none: 'none',
@@ -18,7 +31,18 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         santino: 'url("/assets/images/santino.png")',
         'santino-header': 'url("/assets/images/santino_header.png")',
-        salads: 'url("/assets/images/salads.png")'
+        salads: 'url("/assets/images/salads.png")',
+        'bg-green-1': 'url("/assets/images/bg_green_1.png")',
+        'bg-green-2': 'url("/assets/images/bg_green_2.png")',
+        'bg-leaves': 'url("/assets/images/bg_leaves.png")',
+        'bg-splat': 'url("/assets/images/bg_splat.png")',
+        'bg-white': 'url("/assets/images/bg_white.png")',
+        'logo-small-black': 'url("/assets/images/logo_small_black.png")',
+        'logo-small-green': 'url("/assets/images/logo_small_green.png")',
+        'logo-small-yellow': 'url("/assets/images/logo_small_yellow.png")',
+        'main-logo': 'url("/assets/images/main_logo.png")',
+        'main-logo-2': 'url("/assets/images/main_logo_2.png")',
+        splat: 'url("/assets/images/splat.png")'
       }
     }
   },
@@ -27,6 +51,7 @@ const config: Config = {
       backdropFilter: ['responsive'] // or other variants
     }
   },
+
   plugins: [require('@tailwindcss/postcss7-compat')]
 };
 export default config;
