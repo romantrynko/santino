@@ -10,7 +10,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const KitchenPageContent = () => {
-  const { isMobileInPortrait } = useScreenSize();
+  const { isMobileInPortrait, isPortrait } = useScreenSize();
 
   return (
     <div className="flex bg-yellow">
@@ -25,7 +25,10 @@ const KitchenPageContent = () => {
         <RouteButton
           text={'Бар'}
           route={'/bar'}
-          containerClassName="bottom-[100px] w-14 h-14 right-4"
+          containerClassName={cn({
+            'bottom-[130px] w-20 h-20 right-4': isPortrait,
+            'bottom-[100px] w-14 h-14 right-4': isMobileInPortrait
+          })}
         />
 
         <PageHeader
@@ -48,7 +51,10 @@ const KitchenPageContent = () => {
               key={index}>
               <MenuSectionButton
                 delay={index * 150}
-                textClassName="text-dark-green">
+                textClassName={cn('text-dark-green', {
+                  'text-[46px]': isPortrait,
+                  'text-[24px]': isMobileInPortrait
+                })}>
                 {name.toUpperCase()}
               </MenuSectionButton>
             </Link>

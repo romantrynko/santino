@@ -16,10 +16,10 @@ const MenuSectionButton = ({
   innerContainerClassName,
   textClassName,
   onClick,
-  delay,
+  delay
 }: MenuSectionButtonProps) => {
   const [show, setShow] = useState(false);
-  
+
   const isMangalButton = useMemo(() => children === 'МАНГАЛ МЕНЮ', [children]);
 
   useEffect(() => {
@@ -45,8 +45,8 @@ const MenuSectionButton = ({
         <div
           className={cn(
             'text-center text-[24px] font-light',
-            isMangalButton ? 'text-beige bg-dark-green px-5 rounded' :
-            textClassName
+            textClassName,
+            isMangalButton && 'text-beige bg-dark-green px-5 rounded'
           )}>
           {children}
         </div>

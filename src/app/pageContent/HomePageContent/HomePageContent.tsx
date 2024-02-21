@@ -31,17 +31,21 @@ const HomePageContent = () => {
       />
       <div
         className={cn(
-          'flex z-10 flex-1 flex-col w-full gap-4 mt-2 bg-white bg-cover bg-center',
-          {}
+          'flex z-10 items-center flex-1 flex-col w-full mt-2 bg-white bg-cover bg-center',
+          {
+            'gap-[120px]': isPortrait,
+            'gap-4': isMobileInPortrait,
+          }
         )}>
         {homePageSectionButtons.map(({ name, path }, index) => (
           <MenuSectionButton
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             delay={index * 300}
-            containerClassName={
-              'flex-1 text-dark-green p-5 bg-bg-splat bg-cover rounded-lg'
-            }
+            containerClassName={cn(
+              'flex-1 text-dark-green p-5 bg-bg-splat bg-cover rounded-lg',
+              { "w-[80%]": isPortrait, 'w-full': isMobileInPortrait }
+            )}
             innerContainerClassName="border border-dark-green rounded bg-beige opacity-90"
             textClassName={cn({
               'text-[70px]': isPortrait,

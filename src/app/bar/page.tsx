@@ -10,7 +10,7 @@ import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 
 const BarPageContent = () => {
-  const { isMobileInPortrait } = useScreenSize();
+  const { isMobileInPortrait, isPortrait } = useScreenSize();
 
   return (
     <div className="flex bg-light-blue h-[100vh]">
@@ -25,7 +25,10 @@ const BarPageContent = () => {
         <RouteButton
           text={'Кухня'}
           route={'/kitchen'}
-          containerClassName="bottom-[100px] w-14 h-14 right-4"
+          containerClassName={cn({
+            'bottom-[130px] h-20 right-4 px-4': isPortrait,
+            'bottom-[100px] w-14 h-14 right-4': isMobileInPortrait
+          })}
         />
         <PageHeader
           title="Бар"
@@ -46,7 +49,10 @@ const BarPageContent = () => {
               key={index}>
               <MenuSectionButton
                 delay={index * 150}
-                textClassName="text-dark-green">
+                textClassName={cn("text-dark-green", {
+                  'text-[46px]': isPortrait,
+                  'text-[24px]': isMobileInPortrait
+                })}>
                 {name.toUpperCase()}
               </MenuSectionButton>
             </Link>
