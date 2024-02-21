@@ -2,7 +2,7 @@ import MenuItem from '@/components/MenuItem';
 import RouteButton from '@/components/RouteButton';
 import SectionPageHeader from '@/components/SectionPageHeader';
 import { useRouter } from 'next/navigation';
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { IMenuSectionPageContentProps } from './types';
 
 const MenuSectionPageContent = ({
@@ -10,13 +10,20 @@ const MenuSectionPageContent = ({
   title
 }: IMenuSectionPageContentProps) => {
   const router = useRouter();
+  const containerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
+    }
+  }, []);
 
   const goBack = useCallback(() => {
     router.back();
   }, [router]);
 
   return (
-    <div className="flex relative h-min-[100vh] w-full flex-col gap-3 ">
+    <div className="flex relative w-full flex-col gap-3 bg-bg-leaves bg-contain bg-fixed">
       <RouteButton
         text={'Назад'}
         onClick={goBack}
@@ -24,16 +31,16 @@ const MenuSectionPageContent = ({
 
       <SectionPageHeader title={title} />
 
-      <div className="flex h-min-[80vh] h-max-content pb-20 w-full mt-[130px] bg-bg-leaves bg-contain bg-fixed">
-        <div className="flex flex-col w-full mb-2 px-2">
-          {data?.map((item, index) => (
-            <MenuItem
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              key={index}
-              item={item}
-            />
-          ))}
-        </div>
+      <div
+        ref={containerRef as React.RefObject<HTMLDivElement>}
+        className="flex flex-col w-full mb-2 px-2 gap-4 mt-[130px] pb-20 min-h-[calc(100vh-240px)]">
+        {data?.map((item, index) => (
+          <MenuItem
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+            key={index}
+            item={item}
+          />
+        ))}
       </div>
     </div>
   );

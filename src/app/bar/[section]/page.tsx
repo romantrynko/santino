@@ -35,7 +35,7 @@ const BarMenuPage = () => {
   );
 
   const title = useMemo(
-    () => BarMenuList[section as keyof typeof BarMenuList].name,
+    () => BarMenuList[section as keyof typeof BarMenuList]?.name,
     [section]
   );
 

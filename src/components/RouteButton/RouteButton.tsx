@@ -27,11 +27,10 @@ const RouteButton = ({
     // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
     <div
       onClick={handleButtonClick}
-      className={cn(
-        'fixed bottom-4 right-4 bg-dark-green text-beige w-20 h-14 rounded-[18px] flex items-center justify-center z-10 overflow-hidden opacity-90 active:bg-slate-500 active:duration-300 shadow-lg shadow-slate-600 active:opacity-100',
+      className={cn("fixed bottom-4 right-4 bg-beige text-dark-green w-20 h-14 rounded-[14px] flex items-center justify-center z-10 overflow-hidden active:bg-slate-500 active:duration-300 shadow-inner shadow-dark-green active:opacity-100 text-[16px]",
         containerClassName
       )}>
-      <div className={cn('flex justify-center  text-center', textClassName)}>
+      <div className={cn("flex justify-center text-center text-[18px]", textClassName)}>
         {text}
       </div>
     </div>

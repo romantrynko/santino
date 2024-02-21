@@ -18,11 +18,11 @@ const KitchenMenuPage = () => {
       case '/kitchen/appetizer':
         return { text: 'Міцний алкоголь', route: '/bar/strong_alcohol' };
       case '/kitchen/mangal_menu':
-        return { text: 'Вино', route: '/bar/wine' };
+        return { text: 'Гарніри', route: '/kitchen/side_dishes' };
       case '/kitchen/salads':
         return { text: 'Напої', route: '/bar/non_alcohol_drinks' };
       case '/kitchen/main_dishes':
-        return { text: 'Гарніри', route: '/kitchen/side_dishes' };
+        return { text: 'Вино', route: '/bar/wine' };
       case '/kitchen/soups':
         return { text: 'Для дітей', route: '/kitchen/for_kids' };
       case '/kitchen/hot_appetizer':
@@ -47,7 +47,7 @@ const KitchenMenuPage = () => {
   );
 
   return (
-    <div className='font-kurale bg-beige'>
+    <div className='font-kurale bg-beige h-min-[100vh]'>
       {buttonProps && (
         <RouteButton
           text={buttonProps.text}
@@ -55,13 +55,13 @@ const KitchenMenuPage = () => {
           containerClassName="bottom-4 w-auto px-2 right-[120px]"
         />
       )}
-      {pathname === '/kitchen/hot_appetizer' && (
+      {/* {pathname === '/kitchen/hot_appetizer' && (
         <RouteButton
           text={'Пиво'}
           route={'/bar/beer'}
           containerClassName="bottom-4 w-auto px-2 right-[200px]"
         />
-      )}
+      )} */}
       <RouteButton
         text={'Головна'}
         route={'/'}

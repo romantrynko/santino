@@ -25,6 +25,9 @@ const config: Config = {
         none: 'none',
         blur: 'blur(10px)'
       },
+      boxShadow: {
+        '2xl': 'box-shadow: inset -8px -6px 22px 10px rgba(0,0,0,0.55)'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -49,7 +52,7 @@ const config: Config = {
   variants: {
     extend: {
       backdropFilter: ['responsive'], // or other variants
-      backgroundAttachment: ['responsive'],
+      backgroundAttachment: ['responsive']
     }
   },
 

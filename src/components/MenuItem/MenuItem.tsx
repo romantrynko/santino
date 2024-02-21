@@ -19,23 +19,25 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
   return (
     <div
       key={item.name}
-      className="flex min-h-[50px] w-full items-start justify-between  border-slate-500 p-3 px-2 opacity-90">
+      className="flex min-h-[50px] w-full items-start justify-between  border-slate-500 opacity-90">
       <div
         className={cn(
-          'flex w-full justify-center flex-col text-[14px] mr-8 font-semibold ',
+          'flex w-full justify-center flex-col text-[14px] mr-2 font-semibold ',
           item.variants && 'mr-0'
         )}>
         {item.type && (
-          <div className="text-[18px] text-amber-700">{item.type}</div>
+          <div className="text-[16px] text-amber-700">{item.type}</div>
         )}
         {item.country && (
-          <div className="text-[18px] font-light italic text-amber-700">
+          <div className="text-[16px] font-light italic text-amber-700">
             {item.country}
           </div>
         )}
-        <div className="flex w-full items-center mb-4">{item.name}</div>
+        <div className="flex w-full items-center mb-2 text-[16px]">
+          {item.name}
+        </div>
         {item.description && (
-          <div className="text-[12px] font-light">{item.description}</div>
+          <div className="flex items-center text-[16px] font-light">{item.description}</div>
         )}
         {item.variants && (
           <div className="flex flex-col w-full">
@@ -43,11 +45,15 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
               <div
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={index}
-                className="flex w-full items-center justify-between  mb-2">
+                className="flex w-full items-start justify-between text-[14px] mb-2">
                 {variant.name}
-                <div className="flex justify-center items-center gap-3  text-[16px]">
-                  <div className="font-light italic">{variant.weight}</div>
-                  <div className="font-bold">{variant.price}</div>
+                <div className="flex justify-center items-start gap-3 text-[20px]">
+                  <div className="flex font-light italic items-start justify-center">
+                    {variant.weight}
+                  </div>
+                  <div className="flex font-bold items-start justify-center">
+                    {variant.price}
+                  </div>
                 </div>
               </div>
             ))}
@@ -55,9 +61,9 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
         )}
       </div>
       {item.price && (
-        <div className="flex gap-3 ">
-          {item.weight && <div className="italic">{item.weight}</div>}
-          <div className="font-bold">{item.price}</div>
+        <div className="flex items-start justify-center gap-3 text-[20px]">
+          {item.weight && <div className="flex items-start justify-center italic">{item.weight}</div>}
+          <div className="flex font-bold items-start justify-center">{item.price}</div>
         </div>
       )}
     </div>
