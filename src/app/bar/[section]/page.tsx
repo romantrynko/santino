@@ -5,10 +5,13 @@ import React, { useMemo } from 'react';
 import { BarMenuList } from '@/constants/menuList';
 import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 import RouteButton from '@/components/RouteButton';
+import { useScreenSize } from '@/utils/hooks/useScreenSize';
+import { cn } from '@/utils/utils';
 
 const BarMenuPage = () => {
   const { section } = useParams();
   const pathname = usePathname();
+  const { isPortrait, isMobileInPortrait } = useScreenSize();
 
   const buttonProps = useMemo(() => {
     switch (pathname) {
@@ -40,18 +43,23 @@ const BarMenuPage = () => {
   );
 
   return (
-    <div className='flex font-kurale h-auto'>
+    <div className="flex font-kurale h-auto">
       {buttonProps && (
         <RouteButton
           text={buttonProps.text}
           route={buttonProps.route}
-          containerClassName="bottom-4 w-auto px-2 right-[120px]"
+          containerClassName={cn('bottom-4 w-auto', {
+            'right-[180px] px-8': isPortrait,
+            'right-[120px] px-2': isMobileInPortrait
+          })}
         />
       )}
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName="bottom-4 w-20 left-4"
+        containerClassName={cn('bottom-4 left-4', {"w-[200px] px-8": isPortrait,
+          'w-20': isMobileInPortrait
+        })}
       />
 
       <MenuSectionPageContent

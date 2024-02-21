@@ -6,10 +6,13 @@ import React, { useMemo } from 'react';
 import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 import RouteButton from '@/components/RouteButton';
 import path from 'path';
+import { cn } from '@/utils/utils';
+import { useScreenSize } from '@/utils/hooks/useScreenSize';
 
 const KitchenMenuPage = () => {
   const { section } = useParams();
   const pathname = usePathname();
+  const { isPortrait, isMobileInPortrait } = useScreenSize();
 
   const buttonProps = useMemo(() => {
     switch (pathname) {
@@ -47,12 +50,15 @@ const KitchenMenuPage = () => {
   );
 
   return (
-    <div className='font-kurale bg-beige h-min-[100vh]'>
+    <div className="font-kurale bg-beige h-min-[100vh]">
       {buttonProps && (
         <RouteButton
           text={buttonProps.text}
           route={buttonProps.route}
-          containerClassName="bottom-4 w-auto px-2 right-[120px]"
+          containerClassName={cn('bottom-4 w-auto px-2 ', {
+            'right-[180px]': isPortrait,
+            'right-[120px]': isMobileInPortrait
+          })}
         />
       )}
       {/* {pathname === '/kitchen/hot_appetizer' && (
@@ -65,7 +71,10 @@ const KitchenMenuPage = () => {
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName="bottom-4 w-20 left-4"
+        containerClassName={cn('bottom-4 left-4', {
+          "w-[200px] px-8": isPortrait,
+          'w-20': isMobileInPortrait
+        })}
       />
 
       <MenuSectionPageContent

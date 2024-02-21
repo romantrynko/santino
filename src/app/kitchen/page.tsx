@@ -38,7 +38,7 @@ const KitchenPageContent = () => {
 
         <div
           className={cn(
-            'flex flex-col w-full h-full gap-4 mt-[180px] p-2',
+            'flex flex-col w-full  min-h-[calc(100vh-180px)] gap-4 mt-[180px] p-2',
             {}
           )}>
           {kitchenSectionButtons.map(({ name, section }, index) => (
