@@ -9,6 +9,7 @@ interface PageHeaderProps {
   subtitle?: string;
   subtitleClassName?: string;
   menu?: boolean;
+  isSection?: boolean;
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({
@@ -19,15 +20,19 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   subtitle,
   subtitleClassName,
   menu,
+  isSection,
   ...props
 }) => {
   return (
     <div
       className={cn(
-        'w-full bg-contain bg-no-repeat bg-center flex justify-center items-center flex-1',
+        'w-full relative bg-contain bg-no-repeat bg-center flex justify-center items-center flex-1 overflow-hidden',
         containerClassName
       )}
       {...props}>
+      {isSection && (
+        <div className="absolute bg-bg-splat bg-left bg-cover h-80 w-40 right-[-110px]" />
+      )}
       <div
         className={cn(
           'flex flex-col justify-center items-end  w-full h-full',

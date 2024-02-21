@@ -30,8 +30,8 @@ const HomePageContent = () => {
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             delay={index * 300}
-            containerClassName={'flex-1 text-dark-green p-5'}
-            innerContainerClassName='border border-dark-green rounded'
+            containerClassName={'flex-1 text-dark-green p-5 bg-bg-splat bg-cover rounded-lg'}
+            innerContainerClassName='border border-dark-green rounded bg-beige opacity-90'
             textClassName="text-[34px]"
             onClick={() => handleButtonClick(path)}>
             {name}

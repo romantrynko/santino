@@ -33,6 +33,7 @@ const KitchenPageContent = () => {
           containerClassName="h-40 fixed bg-yellow"
           innerContainerClassName="bg-logo-small-green bg-contain bg-left bg-no-repeat p-2"
           titleClassName="font-extralight tracking-widest"
+          isSection
         />
 
         <div

@@ -32,6 +32,7 @@ const BarPageContent = () => {
           containerClassName="fixed h-40 bg-light-blue "
           innerContainerClassName="bg-logo-small-green bg-contain bg-left bg-no-repeat p-2"
           titleClassName="font-extralight tracking-widest"
+          isSection
         />
         <div
           className={cn(
