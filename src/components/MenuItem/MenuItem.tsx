@@ -48,8 +48,10 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
         )}
         <div
           className={cn('flex w-full items-center mb-2 text-[20px]', {
-            'text-[20px]': isPortrait,
-            'text-[16px]': isMobile
+            'border-b-2 border-dotted': Object.keys(item).length > 1,
+            'border-none': Object.keys(item).length === 1 && item.name,
+            'text-[20px] border-none': isPortrait,
+            'text-[16px] border-none': isMobile,
           })}>
           {item.name}
         </div>
@@ -66,11 +68,11 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
               <div
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={index}
-                className={cn("flex w-full items-start justify-between text-[18px] mb-2", {
-                  'text-[14px]': isPortrait || isMobile,
+                className={cn("flex w-full items-start justify-between text-[18px] mb-2 border-b-2 border-dotted", {
+                  'text-[14px] border-none': isPortrait || isMobile,
                 })}>
                 {variant.name}
-                <div className="flex justify-center items-start gap-3 text-[20px]">
+                <div className="flex justify-center items-start gap-3 text-[20px] ">
                   <div className="flex font-light italic items-start justify-center">
                     {variant.weight}
                   </div>
