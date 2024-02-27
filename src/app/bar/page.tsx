@@ -10,13 +10,13 @@ import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 
 const BarPageContent = () => {
-  const { isMobileInPortrait, isPortrait } = useScreenSize();
+  const { isMobile, isPortrait } = useScreenSize();
 
   return (
     <div className="flex bg-light-blue h-[100vh]">
       <div
         className={cn('flex flex-col w-full h-full font-kurale', {
-          'w-full': isMobileInPortrait
+          'w-full': isMobile
         })}>
         <RouteButton
           text={'Головна'}
@@ -25,9 +25,9 @@ const BarPageContent = () => {
         <RouteButton
           text={'Кухня'}
           route={'/kitchen'}
-          containerClassName={cn({
+          containerClassName={cn('bottom-[130px] h-20 right-4 px-4', {
             'bottom-[130px] h-20 right-4 px-4': isPortrait,
-            'bottom-[100px] w-14 h-14 right-4': isMobileInPortrait
+            'bottom-[100px] w-14 h-14 right-4': isMobile
           })}
         />
         <PageHeader
@@ -51,7 +51,7 @@ const BarPageContent = () => {
                 delay={index * 150}
                 textClassName={cn("text-dark-green", {
                   'text-[46px]': isPortrait,
-                  'text-[24px]': isMobileInPortrait
+                  'text-[24px]': isMobile
                 })}>
                 {name.toUpperCase()}
               </MenuSectionButton>

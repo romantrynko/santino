@@ -17,44 +17,46 @@ export type IMenuItem = {
 };
 
 const MenuItem = ({ item }: { item: IMenuItem }) => {
-  const { isMobileInPortrait, isPortrait } = useScreenSize();
+  const { isMobile, isPortrait } = useScreenSize();
 
   return (
     <div
       key={item.name}
-      className="flex min-h-[50px] w-full items-start justify-between  border-slate-500 opacity-90">
+      className="flex min-h-[50px] w-full items-start justify-between border-slate-500 opacity-90">
       <div
         className={cn(
-          'flex w-full justify-center flex-col text-[14px] mr-2 font-semibold ',
-          item.variants && 'mr-0'
+          'flex w-full justify-center flex-col text-[14px] mr-2 font-semibold',
+          item.variants && 'mr-0',
         )}>
         {item.type && (
           <div
-            className={cn('text-amber-700', {
+            className={cn("text-amber-700 text-[20px]", {
               'text-[20px]': isPortrait,
-              'text-[16px]': isMobileInPortrait
+              'text-[16px]': isMobile
             })}>
             {item.type}
           </div>
         )}
         {item.country && (
           <div
-            className={cn('font-light italic text-amber-700', {
+            className={cn('font-light italic text-amber-700 text-[20px]', {
               'text-[20px]': isPortrait,
-              'text-[16px]': isMobileInPortrait
+              'text-[16px]': isMobile
             })}>
             {item.country}
           </div>
         )}
         <div
-          className={cn('flex w-full items-center mb-2', {
+          className={cn('flex w-full items-center mb-2 text-[20px]', {
             'text-[20px]': isPortrait,
-            'text-[16px]': isMobileInPortrait
+            'text-[16px]': isMobile
           })}>
           {item.name}
         </div>
         {item.description && (
-          <div className="flex items-center text-[16px] font-light">
+          <div className={cn("flex items-center text-[20px] font-light", {
+            'text-[16px]': isPortrait || isMobile,
+          })}>
             {item.description}
           </div>
         )}
@@ -64,7 +66,9 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
               <div
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={index}
-                className="flex w-full items-start justify-between text-[14px] mb-2">
+                className={cn("flex w-full items-start justify-between text-[18px] mb-2", {
+                  'text-[14px]': isPortrait || isMobile,
+                })}>
                 {variant.name}
                 <div className="flex justify-center items-start gap-3 text-[20px]">
                   <div className="flex font-light italic items-start justify-center">

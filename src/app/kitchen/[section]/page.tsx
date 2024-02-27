@@ -5,14 +5,13 @@ import { useParams, usePathname } from 'next/navigation';
 import React, { useMemo } from 'react';
 import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 import RouteButton from '@/components/RouteButton';
-import path from 'path';
 import { cn } from '@/utils/utils';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 
 const KitchenMenuPage = () => {
   const { section } = useParams();
   const pathname = usePathname();
-  const { isPortrait, isMobileInPortrait } = useScreenSize();
+  const { isPortrait, isMobile } = useScreenSize();
 
   const buttonProps = useMemo(() => {
     switch (pathname) {
@@ -55,25 +54,18 @@ const KitchenMenuPage = () => {
         <RouteButton
           text={buttonProps.text}
           route={buttonProps.route}
-          containerClassName={cn('bottom-4 w-auto px-2 ', {
+          containerClassName={cn("bottom-4 w-auto px-2 right-[180px]", {
             'right-[180px]': isPortrait,
-            'right-[120px]': isMobileInPortrait
+            'right-[120px]': isMobile
           })}
         />
       )}
-      {/* {pathname === '/kitchen/hot_appetizer' && (
-        <RouteButton
-          text={'Пиво'}
-          route={'/bar/beer'}
-          containerClassName="bottom-4 w-auto px-2 right-[200px]"
-        />
-      )} */}
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName={cn('bottom-4 left-4', {
+        containerClassName={cn("bottom-4 left-4 w-[200px]", {
           "w-[200px] px-8": isPortrait,
-          'w-20': isMobileInPortrait
+          'w-20': isMobile
         })}
       />
 
