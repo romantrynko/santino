@@ -43,10 +43,10 @@ const HomePageContent = () => {
             key={index}
             delay={index * 300}
             containerClassName={cn(
-              'flex-1 text-dark-green p-5 bg-bg-splat bg-contain rounded-lg w-3/6',
+              'flex-1 text-dark-green p-5 bg-bg-splat bg-contain rounded-[50px] w-3/6',
               { "w-[80%]": isPortrait, 'w-full': isMobile }
             )}
-            innerContainerClassName="border border-dark-green rounded bg-beige opacity-90"
+            innerContainerClassName="border border-dark-green rounded-[50px] bg-beige opacity-90"
             textClassName={cn({
               'text-[70px]': isPortrait,
               'text-[34px]': isMobile

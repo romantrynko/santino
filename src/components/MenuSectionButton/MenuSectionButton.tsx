@@ -1,5 +1,5 @@
 import { cn } from '@/utils/utils';
-import React, { MouseEventHandler, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 type MenuSectionButtonProps = {
   children: React.ReactNode;
@@ -46,7 +46,7 @@ const MenuSectionButton = ({
           className={cn(
             'text-center text-[24px] font-light',
             textClassName,
-            isMangalButton && 'text-beige bg-dark-green px-5 rounded'
+            isMangalButton && 'text-beige bg-dark-green px-5 py-2 rounded'
           )}>
           {children}
         </div>

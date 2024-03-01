@@ -27,7 +27,7 @@ const MenuSectionPageContent = ({
   }, [router]);
 
   return (
-    <div className={cn("flex relative items-center w-full flex-col gap-3 bg-bg-leaves bg-auto bg-fixed")}>
+    <div className={cn("flex relative items-center w-full flex-col gap-3 bg-beige")}>
       <RouteButton
         text={'Назад'}
         onClick={goBack}

@@ -30,34 +30,34 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
         )}>
         {item.type && (
           <div
-            className={cn("text-amber-700 text-[20px]", {
-              'text-[20px]': isPortrait,
-              'text-[16px]': isMobile
+            className={cn("text-amber-700 text-[18px]", {
+              'text-[18px]': isPortrait,
+              'text-[14px]': isMobile
             })}>
             {item.type}
           </div>
         )}
         {item.country && (
           <div
-            className={cn('font-light italic text-amber-700 text-[20px]', {
-              'text-[20px]': isPortrait,
-              'text-[16px]': isMobile
+            className={cn('font-light italic text-amber-700 text-[18px]', {
+              'text-[18px]': isPortrait,
+              'text-[14px]': isMobile
             })}>
             {item.country}
           </div>
         )}
         <div
-          className={cn('flex w-full items-center mb-2 text-[20px]', {
+          className={cn('flex w-full items-center mb-2 text-[18px]', {
             'border-b-2 border-dotted': Object.keys(item).length > 1,
             'border-none': Object.keys(item).length === 1 && item.name,
-            'text-[20px] border-none': isPortrait,
-            'text-[16px] border-none': isMobile,
+            'text-[18px] border-none': isPortrait,
+            'text-[14px] border-none': isMobile,
           })}>
           {item.name}
         </div>
         {item.description && (
-          <div className={cn("flex items-center text-[20px] font-light", {
-            'text-[16px]': isPortrait || isMobile,
+          <div className={cn("flex items-center text-[18px] font-light", {
+            'text-[14px]': isPortrait || isMobile,
           })}>
             {item.description}
           </div>
@@ -72,7 +72,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
                   'text-[14px] border-none': isPortrait || isMobile,
                 })}>
                 {variant.name}
-                <div className="flex justify-center items-start gap-3 text-[20px] ">
+                <div className="flex justify-center items-start gap-3 text-[18px] ">
                   <div className="flex font-light italic items-start justify-center">
                     {variant.weight}
                   </div>
@@ -86,7 +86,7 @@ const MenuItem = ({ item }: { item: IMenuItem }) => {
         )}
       </div>
       {item.price && (
-        <div className="flex items-start justify-center gap-3 text-[20px]">
+        <div className="flex items-start justify-center gap-3 text-[18px]">
           {item.weight && (
             <div className="flex items-start justify-center italic">
               {item.weight}

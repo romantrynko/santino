@@ -28,7 +28,7 @@ const SectionPageHeader = ({
       )}>
       <div
         className={cn(
-          'text-[26px] tracking-widest text-light-green',
+          'text-[26px] text-light-green text-end',
           textClassName
         )}>
         {title}

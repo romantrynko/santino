@@ -30,7 +30,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
         containerClassName
       )}
       {...props}>
-      {isSection && (
+      {isSection && title === 'Бар' && (
         <div className="absolute bg-bg-splat bg-left bg-cover h-80 w-40 right-[-110px]" />
       )}
       <div

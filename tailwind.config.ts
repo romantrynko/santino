@@ -15,6 +15,7 @@ const config: Config = {
     colors: {
       'light-green': '#A6BF9F',
       'dark-green': '#56694A',
+      'yellow-light': '#ffdf6d',
       yellow: '#FDD549',
       rose: '#EBB8B4',
       'light-blue': '#d3f3f5',

@@ -13,7 +13,7 @@ const KitchenPageContent = () => {
   const { isMobileInPortrait, isPortrait } = useScreenSize();
 
   return (
-    <div className="flex bg-yellow">
+    <div className="flex bg-yellow-light">
       <div
         className={cn('flex flex-col w-full h-full font-kurale ', {
           'w-full': isMobileInPortrait
@@ -32,9 +32,9 @@ const KitchenPageContent = () => {
         />
 
         <PageHeader
-          title="Кухня"
-          containerClassName="h-40 fixed bg-yellow"
-          innerContainerClassName="bg-logo-small-green bg-contain bg-left bg-no-repeat p-2"
+          // title="Кухня"
+          containerClassName="h-40 fixed bg-yellow-light"
+          innerContainerClassName="bg-main-logo-2 bg-cover bg-center bg-no-repeat p-2"
           titleClassName="font-extralight tracking-widest"
           isSection
         />
