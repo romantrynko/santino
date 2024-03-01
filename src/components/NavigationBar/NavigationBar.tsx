@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
 import { cn } from '@/utils/utils';
 import MenuSectionButton from '../MenuSectionButton';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
-import { kitchenSectionButtons } from '@/constants/menuList';
+import { barSectionButtons, kitchenSectionButtons } from '@/constants/menuList';
+import { usePathname } from 'next/navigation';
 
 type NavigationBarProps = Readonly<{
   wrapperClassName?: string;
@@ -19,12 +20,24 @@ const NavigationBar = ({
   outerContainerClassName
 }: NavigationBarProps) => {
   const { isPortrait, isMobileInPortrait } = useScreenSize();
+  const pathname = usePathname();
+  
+  const buttons = useMemo(() => {
+    switch (true) {
+      case pathname.startsWith("/kitchen"):
+        return kitchenSectionButtons;
+      case pathname.startsWith("/bar"):
+        return barSectionButtons;
+      default:
+        return [];
+    }
+  }, [pathname]);
 
   return (
     <div className={cn('flex flex-row w-full', wrapperClassName)}>
-      {kitchenSectionButtons.map(({ name, section }, index) => (
+      {buttons.map(({ name, path }, index) => (
         <Link
-          href={`/kitchen/${section}`}
+          href={path}
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           key={index}>
           <MenuSectionButton
