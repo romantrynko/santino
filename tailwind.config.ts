@@ -57,6 +57,6 @@ const config: Config = {
     }
   },
 
-  plugins: [require('@tailwindcss/postcss7-compat')]
+  plugins: [require('@tailwindcss/postcss7-compat'), require('tailwindcss-no-scrollbar')]
 };
 export default config;

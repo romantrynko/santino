@@ -1,4 +1,5 @@
 import { cn } from '@/utils/utils';
+import { usePathname } from 'next/navigation';
 import React, { useEffect, useMemo, useState } from 'react';
 
 type MenuSectionButtonProps = {
@@ -19,6 +20,7 @@ const MenuSectionButton = ({
   delay
 }: MenuSectionButtonProps) => {
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
 
   const isMangalButton = useMemo(() => children === 'МАНГАЛ МЕНЮ', [children]);
 
@@ -46,7 +48,7 @@ const MenuSectionButton = ({
           className={cn(
             'text-center text-[24px] font-light',
             textClassName,
-            isMangalButton && 'text-beige bg-dark-green px-5 py-2 rounded'
+            isMangalButton && pathname === '/kitchen' && 'text-beige bg-dark-green px-5 py-2 rounded'
           )}>
           {children}
         </div>

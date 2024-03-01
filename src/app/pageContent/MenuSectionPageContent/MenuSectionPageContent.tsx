@@ -29,6 +29,7 @@ const MenuSectionPageContent = ({
   return (
     <div className={cn("flex relative items-center w-full flex-col gap-3 bg-beige")}>
       <RouteButton
+        containerClassName={cn("bottom-20")}
         text={'Назад'}
         onClick={goBack}
       />

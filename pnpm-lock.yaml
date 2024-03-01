@@ -23,6 +23,9 @@ dependencies:
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
+  tailwindcss-no-scrollbar:
+    specifier: ^1.0.1
+    version: 1.0.1
   ua-parser-js:
     specifier: ^1.0.37
     version: 1.0.37
@@ -2904,6 +2907,10 @@ packages:
     resolution: {integrity: sha512-o+2GTLkthfa5YUt4JxPfzMIpQzZ3adD1vLVkvKE1Twl9UAhGsEbIZhHHZVRttyW177S8PDJI3bTQNaebyofK3Q==}
     dependencies:
       '@babel/runtime': 7.23.9
+    dev: false
+
+  /tailwindcss-no-scrollbar@1.0.1:
+    resolution: {integrity: sha512-6Jy3iFvlQ8hZ3TdM+c96GMk1hrPYZGxvUghIQvEGGzp6u2JP/iZGXMoOL3/R2Sb4VisUku0oz8NZ9MT4LTgu4w==}
     dev: false
 
   /tailwindcss@3.4.1:
