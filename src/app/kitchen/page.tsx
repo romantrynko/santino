@@ -20,6 +20,7 @@ const KitchenPageContent = () => {
           text={'Головна'}
           route={'/'}
         />
+        
         <RouteButton
           text={'Бар'}
           route={'/bar'}

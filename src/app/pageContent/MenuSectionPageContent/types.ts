@@ -11,5 +11,6 @@ export interface IMenuSectionPageContentProps {
       price: string;
     }[];
   }[];
+  opacity?: string;
   title: string;
 }

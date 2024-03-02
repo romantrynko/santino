@@ -9,7 +9,8 @@ import { useScreenSize } from '@/utils/hooks/useScreenSize';
 
 const MenuSectionPageContent = ({
   data,
-  title
+  title,
+  opacity
 }: IMenuSectionPageContentProps) => {
   const router = useRouter();
   const containerRef = useRef<HTMLElement | null>(null);
@@ -27,9 +28,10 @@ const MenuSectionPageContent = ({
   }, [router]);
 
   return (
-    <div className={cn("flex relative items-center w-full flex-col gap-3 bg-beige")}>
+    <div
+      className={`flex relative items-center w-full flex-col gap-3 bg-beige transition duration-300 ease-in ${opacity}`} >
       <RouteButton
-        containerClassName={cn("bottom-[100px]")}
+        containerClassName={cn('bottom-[100px]')}
         text={'Назад'}
         onClick={goBack}
       />
@@ -38,10 +40,13 @@ const MenuSectionPageContent = ({
 
       <div
         ref={containerRef as React.RefObject<HTMLDivElement>}
-        className={cn("flex flex-col items-center w-4/6 mb-2 px-2 gap-4 mt-[130px] pb-[130px] min-h-[calc(100vh-240px)]", {
-          'w-5/6 ': isPortrait,
-          'w-full': isMobile,
-        })}>
+        className={cn(
+          'flex flex-col items-center w-4/6 mb-2 px-2 gap-4 mt-[130px] pb-[130px] min-h-[calc(100vh-240px)]',
+          {
+            'w-5/6 ': isPortrait,
+            'w-full': isMobile
+          }
+        )}>
         {data?.map((item, index) => (
           <MenuItem
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>

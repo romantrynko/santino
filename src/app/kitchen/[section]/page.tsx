@@ -2,7 +2,7 @@
 
 import { KitchenMenuList } from '@/constants/menuList';
 import { useParams, usePathname } from 'next/navigation';
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 import RouteButton from '@/components/RouteButton';
 import { cn } from '@/utils/utils';
@@ -10,8 +10,15 @@ import { useScreenSize } from '@/utils/hooks/useScreenSize';
 
 const KitchenMenuPage = () => {
   const { section } = useParams();
+  const [show, setShow] = useState(false);
   const pathname = usePathname();
   const { isPortrait, isMobile } = useScreenSize();
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  useEffect(() => {
+    const timer = setTimeout(() => setShow(true), 300);
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   // const buttonProps = useMemo(() => {
   //   switch (pathname) {
@@ -63,12 +70,13 @@ const KitchenMenuPage = () => {
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName={cn("bottom-[100px] left-2 w-[100px]", {
+        containerClassName={cn('bottom-[100px] left-2 w-[100px]', {
           'w-20': isMobile
         })}
       />
 
       <MenuSectionPageContent
+        opacity={show ? 'opacity-100' : 'opacity-0'}
         data={data}
         title={title}
       />

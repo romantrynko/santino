@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, usePathname } from 'next/navigation';
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { BarMenuList } from '@/constants/menuList';
 import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 import RouteButton from '@/components/RouteButton';
@@ -10,8 +10,16 @@ import { cn } from '@/utils/utils';
 
 const BarMenuPage = () => {
   const { section } = useParams();
+  const [show, setShow] = useState(false);
+
   const pathname = usePathname();
-  const { isPortrait, isMobileInPortrait } = useScreenSize();
+  const { isMobileInPortrait } = useScreenSize();
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  useEffect(() => {
+    const timer = setTimeout(() => setShow(true), 300);
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   // const buttonProps = useMemo(() => {
   //   switch (pathname) {
@@ -62,10 +70,11 @@ const BarMenuPage = () => {
         })}
       />
 
-      <MenuSectionPageContent
-        data={data}
-        title={title}
-      />
+        <MenuSectionPageContent
+          opacity={show ? 'opacity-100' : 'opacity-0'}
+          data={data}
+          title={title}
+        />
     </div>
   );
 };
