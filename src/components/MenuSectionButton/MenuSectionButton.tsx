@@ -9,6 +9,7 @@ type MenuSectionButtonProps = {
   textClassName?: string;
   onClick?: () => void;
   delay?: number;
+  selected?: boolean;
 };
 
 const MenuSectionButton = ({
@@ -17,7 +18,8 @@ const MenuSectionButton = ({
   innerContainerClassName,
   textClassName,
   onClick,
-  delay
+  delay,
+  selected = false
 }: MenuSectionButtonProps) => {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
@@ -36,7 +38,8 @@ const MenuSectionButton = ({
         `flex justify-center items-center cursor-pointer active:scale-[98%] active:duration-150 transition duration-200 ease-in ${
           show ? 'opacity-100' : 'opacity-0'
         }`,
-        containerClassName
+        containerClassName,
+        selected && ' bg-dark-green'
       )}
       onClick={onClick}>
       <div
@@ -48,7 +51,10 @@ const MenuSectionButton = ({
           className={cn(
             'text-center text-[24px] font-light',
             textClassName,
-            isMangalButton && pathname === '/kitchen' && 'text-beige bg-dark-green px-5 py-2 rounded'
+            isMangalButton &&
+              pathname === '/kitchen' &&
+              'text-beige bg-dark-green px-5 py-2 rounded',
+            selected && 'text-beige '
           )}>
           {children}
         </div>

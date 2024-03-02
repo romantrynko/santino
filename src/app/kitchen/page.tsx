@@ -1,12 +1,10 @@
 'use client';
 
-import MenuSectionButton from '@/components/MenuSectionButton';
+import NavigationBar from '@/components/NavigationBar';
 import PageHeader from '@/components/PageHeader';
 import RouteButton from '@/components/RouteButton';
-import { kitchenSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
-import Link from 'next/link';
 import React from 'react';
 
 const KitchenPageContent = () => {
@@ -33,33 +31,33 @@ const KitchenPageContent = () => {
 
         <PageHeader
           // title="Кухня"
-          containerClassName="h-40 fixed bg-yellow-light"
-          innerContainerClassName="bg-main-logo-2 bg-cover bg-center bg-no-repeat p-2"
+          containerClassName={cn("fixed bg-yellow-light",
+          {
+            'h-60': isPortrait,
+            'h-40 ': isMobileInPortrait
+            })}
+          innerContainerClassName={cn("bg-main-logo-2 bg-center bg-no-repeat p-2", {
+            'bg-contain': isPortrait,
+            'bg-cover': isMobileInPortrait
+            })}
           titleClassName="font-extralight tracking-widest"
           isSection
         />
 
-        <div
-          className={cn(
-            'flex flex-col w-full  min-h-[calc(100vh-180px)] gap-4 mt-[180px] p-2',
-            {}
-          )}>
-          {kitchenSectionButtons.map(({ name, section }, index) => (
-            <Link
-              href={`/kitchen/${section}`}
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              key={index}>
-              <MenuSectionButton
-                delay={index * 150}
-                textClassName={cn('text-dark-green', {
-                  'text-[46px]': isPortrait,
-                  'text-[24px]': isMobileInPortrait
-                })}>
-                {name.toUpperCase()}
-              </MenuSectionButton>
-            </Link>
-          ))}
-        </div>
+        <NavigationBar
+          wrapperClassName={cn("text-[24px] flex flex-col w-full min-h-[calc(100vh-180px)] gap-4 mt-[180px] p-2",
+          {
+            'min-h-[calc(100vh-220px)] mt-[220px]': isPortrait,
+            'mt-[180px]': isMobileInPortrait,
+          })}
+   
+          buttonTextClassName={cn("text-14px",
+          {
+            'text-14px text-dark-green': isMobileInPortrait,
+            'text-24px text-dark-green': isPortrait,
+          }
+          )}
+        />
       </div>
     </div>
   );

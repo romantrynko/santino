@@ -8,6 +8,7 @@ import React from 'react';
 import RouteButton from '@/components/RouteButton/RouteButton';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
+import NavigationBar from '@/components/NavigationBar';
 
 const BarPageContent = () => {
   const { isMobile, isPortrait } = useScreenSize();
@@ -37,27 +38,11 @@ const BarPageContent = () => {
           titleClassName="font-extralight tracking-widest"
           isSection
         />
-        <div
-          className={cn(
-            'flex flex-col w-full h-full gap-2 mt-[180px] p-2',
-            {}
-          )}>
-          {barSectionButtons.map(({ name, section }, index) => (
-            <Link
-              href={`/bar/${section}`}
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              key={index}>
-              <MenuSectionButton
-                delay={index * 150}
-                textClassName={cn("text-dark-green", {
-                  'text-[46px]': isPortrait,
-                  'text-[24px]': isMobile
-                })}>
-                {name.toUpperCase()}
-              </MenuSectionButton>
-            </Link>
-          ))}
-        </div>
+        <NavigationBar
+          wrapperClassName={cn(
+            'flex flex-col w-full  min-h-[calc(100vh-180px)] gap-4 mt-[180px] p-2'
+          )}
+        />
       </div>
     </div>
   );

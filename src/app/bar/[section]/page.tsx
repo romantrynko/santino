@@ -13,24 +13,24 @@ const BarMenuPage = () => {
   const pathname = usePathname();
   const { isPortrait, isMobileInPortrait } = useScreenSize();
 
-  const buttonProps = useMemo(() => {
-    switch (pathname) {
-      case '/bar/cocktails':
-        return { text: 'Десерти', route: '/kitchen/desserts' };
-      case '/bar/wine':
-        return { text: 'Мангал меню', route: '/kitchen/mangal_menu' };
-      case '/bar/beer':
-        return { text: 'Мангал меню', route: '/kitchen/mangal_menu' };
-      case '/bar/strong_alcohol':
-        return { text: 'Закуски', route: '/kitchen/appetizer' };
-      case '/bar/hot_drinks':
-        return { text: 'Десерти', route: '/kitchen/desserts' };
-      case '/bar/soft_drinks':
-        return { text: 'Основні страви', route: '/kitchen/main_dishes' };
-      default:
-        return;
-    }
-  }, [pathname]);
+  // const buttonProps = useMemo(() => {
+  //   switch (pathname) {
+  //     case '/bar/cocktails':
+  //       return { text: 'Десерти', route: '/kitchen/desserts' };
+  //     case '/bar/wine':
+  //       return { text: 'Мангал меню', route: '/kitchen/mangal_menu' };
+  //     case '/bar/beer':
+  //       return { text: 'Мангал меню', route: '/kitchen/mangal_menu' };
+  //     case '/bar/strong_alcohol':
+  //       return { text: 'Закуски', route: '/kitchen/appetizer' };
+  //     case '/bar/hot_drinks':
+  //       return { text: 'Десерти', route: '/kitchen/desserts' };
+  //     case '/bar/soft_drinks':
+  //       return { text: 'Основні страви', route: '/kitchen/main_dishes' };
+  //     default:
+  //       return;
+  //   }
+  // }, [pathname]);
 
   const data = useMemo(
     () => BarMenuList[section as keyof typeof BarMenuList]?.data,
@@ -44,7 +44,7 @@ const BarMenuPage = () => {
 
   return (
     <div className="flex font-kurale h-auto">
-      {buttonProps && (
+      {/* {buttonProps && (
         <RouteButton
           text={buttonProps.text}
           route={buttonProps.route}
@@ -53,11 +53,11 @@ const BarMenuPage = () => {
             'right-[120px] px-2': isMobileInPortrait
           })}
         />
-      )}
+      )} */}
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName={cn('bottom-4 left-4 w-[200px]', {
+        containerClassName={cn('bottom-[100px] left-2 w-[200px]', {
           'w-[200px] px-8': isPortrait,
           'w-20': isMobileInPortrait
         })}

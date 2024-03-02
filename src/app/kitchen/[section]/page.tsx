@@ -63,7 +63,7 @@ const KitchenMenuPage = () => {
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName={cn("bottom-20 left-4 w-[200px]", {
+        containerClassName={cn("bottom-[100px] left-2 w-[200px]", {
           "w-[200px] px-8": isPortrait,
           'w-20': isMobile
         })}

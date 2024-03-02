@@ -5,33 +5,41 @@ import MenuSectionButton from '../MenuSectionButton';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { barSectionButtons, kitchenSectionButtons } from '@/constants/menuList';
 import { usePathname } from 'next/navigation';
+import { on } from 'events';
 
 type NavigationBarProps = Readonly<{
   wrapperClassName?: string;
   buttonTextClassName?: string;
   innerContainerClassName?: string;
   outerContainerClassName?: string;
+  onClick?: () => void;
 }>;
 
 const NavigationBar = ({
   wrapperClassName,
   buttonTextClassName,
   innerContainerClassName,
-  outerContainerClassName
+  outerContainerClassName,
+  onClick
 }: NavigationBarProps) => {
   const { isPortrait, isMobileInPortrait } = useScreenSize();
   const pathname = usePathname();
-  
+
   const buttons = useMemo(() => {
     switch (true) {
-      case pathname.startsWith("/kitchen"):
+      case pathname.startsWith('/kitchen'):
         return kitchenSectionButtons;
-      case pathname.startsWith("/bar"):
+      case pathname.startsWith('/bar'):
         return barSectionButtons;
       default:
         return [];
     }
   }, [pathname]);
+
+  const isNotSectionPage = useMemo(
+    () => pathname !== '/kitchen' && pathname !== '/bar',
+    [pathname]
+  );
 
   return (
     <div className={cn('flex flex-row w-full', wrapperClassName)}>
@@ -41,14 +49,22 @@ const NavigationBar = ({
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           key={index}>
           <MenuSectionButton
+            onClick={onClick}
+            selected={pathname === path}
             delay={index * 150}
             innerContainerClassName={cn(innerContainerClassName)}
             containerClassName={cn(outerContainerClassName)}
-            textClassName={cn('text-dark-green', buttonTextClassName, {
-              'text-[46px]': isPortrait,
-              'text-[24px]': isMobileInPortrait
-            })}>
-            {name.toUpperCase()}
+            textClassName={cn(
+              'text-dark-green',
+              {
+                'text-[36px]': isPortrait,
+                'text-[24px]': isMobileInPortrait
+              },
+              buttonTextClassName
+            )}>
+            {isNotSectionPage
+              ? name.charAt(0).toUpperCase() + name.slice(1)
+              : name.toUpperCase().toString()}
           </MenuSectionButton>
         </Link>
       ))}
