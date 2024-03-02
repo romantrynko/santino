@@ -38,7 +38,7 @@ const MenuSectionPageContent = ({
 
       <div
         ref={containerRef as React.RefObject<HTMLDivElement>}
-        className={cn("flex flex-col items-center w-4/6 mb-2 px-2 gap-4 mt-[130px] pb-20 min-h-[calc(100vh-240px)]", {
+        className={cn("flex flex-col items-center w-4/6 mb-2 px-2 gap-4 mt-[130px] pb-[130px] min-h-[calc(100vh-240px)]", {
           'w-5/6 ': isPortrait,
           'w-full': isMobile,
         })}>

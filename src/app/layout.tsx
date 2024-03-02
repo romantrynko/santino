@@ -40,7 +40,6 @@ export default function RootLayout({
               wrapperClassName={cn("flex items-center gap-4 w-full", {
                 'w-full': isMobileInPortrait
               })}
-              // outerContainerClassName="flex items-center justify-center px-3 py-1 bg-dark-green rounded"
               outerContainerClassName={cn("bg-beige text-dark-green flex items-center justify-center z-10 overflow-hidden active:bg-slate-500 active:duration-300 shadow-sm shadow-dark-green active:opacity-100 rounded-[20px] px-4 py-2 cursor-pointer transition"
               )}
 

@@ -57,8 +57,7 @@ const BarMenuPage = () => {
       <RouteButton
         text={'Головна'}
         route={'/'}
-        containerClassName={cn('bottom-[100px] left-2 w-[200px]', {
-          'w-[200px] px-8': isPortrait,
+        containerClassName={cn('bottom-[100px] left-2 w-[100px]', {
           'w-20': isMobileInPortrait
         })}
       />

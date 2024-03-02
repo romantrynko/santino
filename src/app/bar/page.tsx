@@ -27,8 +27,8 @@ const BarPageContent = () => {
           text={'Кухня'}
           route={'/kitchen'}
           containerClassName={cn('bottom-[130px] h-20 right-4 px-4', {
-            'bottom-[130px] h-20 right-4 px-4': isPortrait,
-            'bottom-[100px] w-14 h-14 right-4': isMobile
+            'bottom-[130px] h-20 right-2 px-4': isPortrait,
+            'bottom-[100px] w-14 h-14 right-2': isMobile
           })}
         />
         <PageHeader

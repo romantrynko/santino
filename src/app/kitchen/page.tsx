@@ -24,8 +24,8 @@ const KitchenPageContent = () => {
           text={'Бар'}
           route={'/bar'}
           containerClassName={cn('bottom-[130px] w-20 h-20 right-4', {
-            'bottom-[130px] w-20 h-20 right-4': isPortrait,
-            'bottom-[100px] w-14 h-14 right-4': isMobileInPortrait
+            'bottom-[130px] w-20 h-20 right-2': isPortrait,
+            'bottom-[100px] w-14 h-14 right-2': isMobileInPortrait
           })}
         />
 

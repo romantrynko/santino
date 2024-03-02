@@ -572,7 +572,7 @@ export const barSectionButtons = [
     path: '/bar/strong_alcohol'
   },
   { section: 'wine', name: 'Вино', path: '/bar/wine' },
-  { section: 'cocktails', name: 'КОКТЕЙЛІ', path: '/bar/cocktails' },
+  { section: 'cocktails', name: 'Коктейлі', path: '/bar/cocktails' },
   {
     section: 'non_alcohol_drinks',
     name: 'Напої безалкогольні',

@@ -1,11 +1,10 @@
-import React, { useMemo } from 'react';
+import React, { Ref, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import { cn } from '@/utils/utils';
 import MenuSectionButton from '../MenuSectionButton';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { barSectionButtons, kitchenSectionButtons } from '@/constants/menuList';
 import { usePathname } from 'next/navigation';
-import { on } from 'events';
 
 type NavigationBarProps = Readonly<{
   wrapperClassName?: string;
@@ -24,6 +23,16 @@ const NavigationBar = ({
 }: NavigationBarProps) => {
   const { isPortrait, isMobileInPortrait } = useScreenSize();
   const pathname = usePathname();
+
+  const selectedButtonRef = useRef<HTMLDivElement>(null);
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  useEffect(() => {
+    selectedButtonRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center'
+    });
+  }, [pathname]);
 
   const buttons = useMemo(() => {
     switch (true) {
@@ -45,6 +54,11 @@ const NavigationBar = ({
     <div className={cn('flex flex-row w-full', wrapperClassName)}>
       {buttons.map(({ name, path }, index) => (
         <Link
+          ref={
+            pathname === path
+              ? (selectedButtonRef as unknown as Ref<HTMLAnchorElement>)
+              : undefined
+          }
           href={path}
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           key={index}>
