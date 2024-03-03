@@ -22,16 +22,16 @@ const MenuSectionPageContent = ({
   useEffect(() => {
     const handleScroll = () => {
       const maxScrollTop =
-        document.documentElement.scrollHeight -
+        (listRef.current?.scrollHeight || 0) -
         document.documentElement.clientHeight;
 
       const scrollTop = window.scrollY;
       setScrollPosition(scrollTop);
 
-      const scrollPercentage = Number(((scrollTop / maxScrollTop) * 100).toFixed(1));
+      const scrollPercentage = Number(
+        ((scrollTop / maxScrollTop) * 100).toFixed(1)
+      );
       setScrollPosition(scrollPercentage);
-
-      console.log('scrollPercentage', scrollPercentage);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -65,7 +65,7 @@ const MenuSectionPageContent = ({
         scrollPercentage={scrollPosition}
       />
       <div
-        className="flex w-full overflow-scroll px-2 "
+        className="flex w-full overflow-scroll "
         ref={containerRef as unknown as React.RefObject<HTMLDivElement>}>
         <div
           ref={listRef as unknown as React.RefObject<HTMLDivElement>}
