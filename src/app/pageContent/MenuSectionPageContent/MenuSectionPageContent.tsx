@@ -22,7 +22,7 @@ const MenuSectionPageContent = ({
   useEffect(() => {
     const handleScroll = () => {
       const maxScrollTop =
-        (listRef.current?.scrollHeight || 0) -
+        (listRef.current?.scrollHeight || 0) + 120 -
         document.documentElement.clientHeight;
 
       const scrollTop = window.scrollY;
