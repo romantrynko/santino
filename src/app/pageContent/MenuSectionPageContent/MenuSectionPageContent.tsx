@@ -22,7 +22,7 @@ const MenuSectionPageContent = ({
   useEffect(() => {
     const handleScroll = () => {
       const maxScrollTop =
-        (listRef.current?.scrollHeight || 0) + 120 -
+        (listRef.current?.scrollHeight || 0) -
         document.documentElement.clientHeight;
 
       const scrollTop = window.scrollY;
@@ -65,7 +65,7 @@ const MenuSectionPageContent = ({
         scrollPercentage={scrollPosition}
       />
       <div
-        className="flex w-full overflow-scroll px-2"
+        className="flex w-full overflow-scroll "
         ref={containerRef as unknown as React.RefObject<HTMLDivElement>}>
         <div
           ref={listRef as unknown as React.RefObject<HTMLDivElement>}
