@@ -12,7 +12,7 @@ const KitchenMenuPage = () => {
   const { section } = useParams();
   const [show, setShow] = useState(false);
   const pathname = usePathname();
-  const { isPortrait, isMobile } = useScreenSize();
+  const { isMobile } = useScreenSize();
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
@@ -57,16 +57,6 @@ const KitchenMenuPage = () => {
 
   return (
     <div className="font-kurale bg-beige h-min-[100vh]">
-      {/* {buttonProps && (
-        <RouteButton
-          text={buttonProps.text}
-          route={buttonProps.route}
-          containerClassName={cn("bottom-4 w-auto px-2 right-[180px]", {
-            'right-[180px]': isPortrait,
-            'right-[120px]': isMobile
-          })}
-        />
-      )} */}
       <RouteButton
         text={'Головна'}
         route={'/'}

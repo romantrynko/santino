@@ -19,7 +19,9 @@ const config: Config = {
       yellow: '#FDD549',
       rose: '#EBB8B4',
       'light-blue': '#d3f3f5',
-      beige: '#FFFBF4'
+      beige: '#FFFBF4',
+      'cyan-950': '#0D1C2E',
+      
     },
     extend: {
       backdropFilter: {
