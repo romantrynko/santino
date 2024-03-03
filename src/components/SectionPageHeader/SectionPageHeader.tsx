@@ -17,7 +17,7 @@ const SectionPageHeader = ({
   scrollPercentage
 }: SectionPageHeaderProps) => {
   const computedWidthValue = useMemo(
-    () => `calc(${scrollPercentage}% + 8px)`,
+    () => `calc(${scrollPercentage}%`,
     [scrollPercentage]
   );
 

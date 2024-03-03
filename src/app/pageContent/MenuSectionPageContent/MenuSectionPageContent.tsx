@@ -65,7 +65,7 @@ const MenuSectionPageContent = ({
         scrollPercentage={scrollPosition}
       />
       <div
-        className="flex w-full overflow-scroll "
+        className="flex w-full overflow-scroll px-2"
         ref={containerRef as unknown as React.RefObject<HTMLDivElement>}>
         <div
           ref={listRef as unknown as React.RefObject<HTMLDivElement>}
