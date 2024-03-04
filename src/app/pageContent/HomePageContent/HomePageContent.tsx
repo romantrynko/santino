@@ -1,5 +1,4 @@
-import MenuSectionButton from '@/components/MenuSectionButton';
-import PageHeader from '@/components/PageHeader';
+import { MenuSectionButton, PageHeader } from '@/components';
 import { homePageSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';

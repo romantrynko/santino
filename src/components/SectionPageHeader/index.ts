@@ -1,1 +1,1 @@
-export { default } from './SectionPageHeader';
+export { default as SectionPageHeader } from './SectionPageHeader';

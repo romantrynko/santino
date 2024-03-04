@@ -1,11 +1,9 @@
-import MenuItem from '@/components/MenuItem';
-import RouteButton from '@/components/RouteButton';
-import SectionPageHeader from '@/components/SectionPageHeader';
 import { useRouter } from 'next/navigation';
-import React, { use, useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { IMenuSectionPageContentProps } from './types';
 import { cn } from '@/utils/utils';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
+import { MenuItem, RouteButton, SectionPageHeader } from '@/components';
 
 const MenuSectionPageContent = ({
   data,

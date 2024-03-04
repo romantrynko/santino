@@ -1,2 +1,2 @@
-export { default } from './MenuSectionPageContent';
+export { default as MenuSectionPageContent } from './MenuSectionPageContent';
 

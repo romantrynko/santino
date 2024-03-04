@@ -3,11 +3,10 @@
 import { useParams, usePathname } from 'next/navigation';
 import React, { useEffect, useMemo, useState } from 'react';
 import { BarMenuList } from '@/constants/menuList';
-import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
-import RouteButton from '@/components/RouteButton';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
-import { ButtonTint } from '@/components';
+import { ButtonTint, RouteButton } from '@/components';
+import { MenuSectionPageContent } from '@/app/pageContent';
 
 const BarMenuPage = () => {
   const { section } = useParams();

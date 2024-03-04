@@ -1,15 +1,10 @@
 'use client';
 
-import MenuSectionButton from '@/components/MenuSectionButton';
-import { barSectionButtons } from '@/constants/menuList';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
 import React from 'react';
 import RouteButton from '@/components/RouteButton/RouteButton';
-import Link from 'next/link';
-import PageHeader from '@/components/PageHeader';
-import NavigationBar from '@/components/NavigationBar';
-import { ButtonTint } from '@/components';
+import {  NavigationBar, PageHeader } from '@/components';
 
 const BarPageContent = () => {
   const { isMobile, isPortrait } = useScreenSize();

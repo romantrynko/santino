@@ -1,10 +1,10 @@
 import React, { Ref, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import { cn } from '@/utils/utils';
-import MenuSectionButton from '../MenuSectionButton';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { barSectionButtons, kitchenSectionButtons } from '@/constants/menuList';
 import { usePathname } from 'next/navigation';
+import { MenuSectionButton } from '@/components';
 
 type NavigationBarProps = Readonly<{
   wrapperClassName?: string;

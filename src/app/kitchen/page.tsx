@@ -1,8 +1,6 @@
 'use client';
 
-import NavigationBar from '@/components/NavigationBar';
-import PageHeader from '@/components/PageHeader';
-import RouteButton from '@/components/RouteButton';
+import { NavigationBar, PageHeader, RouteButton } from '@/components';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
 import React from 'react';

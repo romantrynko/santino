@@ -1,2 +1,2 @@
-export * from './HomePageContent';
-export * from './MenuSectionPageContent';
+export { HomePageContent } from './HomePageContent';
+export { MenuSectionPageContent } from './MenuSectionPageContent';

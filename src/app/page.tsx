@@ -1,6 +1,6 @@
 'use client';
 
-import HomePageContent from '@/app/pageContent/HomePageContent';
+import { HomePageContent } from './pageContent';
 
 export default function Home() {
   return (

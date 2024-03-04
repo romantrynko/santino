@@ -3,11 +3,10 @@
 import { KitchenMenuList } from '@/constants/menuList';
 import { useParams, usePathname } from 'next/navigation';
 import React, { useEffect, useMemo, useState } from 'react';
-import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
-import RouteButton from '@/components/RouteButton';
 import { cn } from '@/utils/utils';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
-import { ButtonTint } from '@/components';
+import { ButtonTint, RouteButton } from '@/components';
+import { MenuSectionPageContent } from '@/app/pageContent';
 
 const KitchenMenuPage = () => {
   const { section } = useParams();

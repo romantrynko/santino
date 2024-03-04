@@ -7,7 +7,7 @@ import { cn } from '@/utils/utils';
 import { ScreenSizeProvider, useScreenSize } from '@/utils/hooks/useScreenSize';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import NavigationBar from '@/components/NavigationBar';
+import { NavigationBar } from '@/components';
 
 const inter = Inter({ subsets: ['latin'] });
 
