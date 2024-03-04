@@ -52,24 +52,6 @@ const BarMenuPage = () => {
 
   return (
     <div className="flex font-kurale h-auto">
-      {/* {buttonProps && (
-        <RouteButton
-          text={buttonProps.text}
-          route={buttonProps.route}
-          containerClassName={cn("bottom-4 w-auto right-[180px]", {
-            'right-[180px] px-8': isPortrait,
-            'right-[120px] px-2': isMobileInPortrait
-          })}
-        />
-      )} */}
-      <RouteButton
-        text={'Головна'}
-        route={'/'}
-        containerClassName={cn('bottom-[100px] left-2 w-[100px]', {
-          'w-20': isMobileInPortrait
-        })}
-      />
-
       <MenuSectionPageContent
         opacity={show ? 'opacity-100' : 'opacity-0'}
         data={data}

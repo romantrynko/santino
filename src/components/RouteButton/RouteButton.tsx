@@ -24,7 +24,16 @@ const RouteButton = ({
 
   const handleButtonClick = useCallback(() => {
     setIsClicked(true);
-    setTimeout(() => (!onClick ? router.push(route || '') : onClick()), 200);
+    const timeout1 = setTimeout(
+      () => (!onClick ? router.push(route || '') : onClick()),
+      200
+    );
+    const timeout2 = setTimeout(() => setIsClicked(false), 200);
+
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+    };
   }, [onClick, route, router]);
 
   return (
@@ -35,6 +44,7 @@ const RouteButton = ({
         'fixed bottom-4 right-2 bg-beige text-dark-green flex items-center justify-center z-10 opacity-90 overflow-hidden active:bg-slate-500 active:duration-300 shadow-sm shadow-dark-green active:opacity-100 rounded-[20px] px-2 h-16 cursor-pointer transition',
         {
           'bg-light-green text-beige scale-95': isClicked,
+          'bg-beige text-dark-green scale-100': !isClicked,
           'w-20 h-14 rounded-[20px]': isMobileInPortrait
         },
         containerClassName

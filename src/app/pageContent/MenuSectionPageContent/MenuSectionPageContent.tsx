@@ -3,14 +3,13 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { IMenuSectionPageContentProps } from './types';
 import { cn } from '@/utils/utils';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
-import { MenuItem, RouteButton, SectionPageHeader } from '@/components';
+import { MenuItem, RouteButton, RouteButtonGroup, SectionPageHeader } from '@/components';
 
 const MenuSectionPageContent = ({
   data,
   title,
   opacity
 }: IMenuSectionPageContentProps) => {
-  const router = useRouter();
   const containerRef = useRef<HTMLElement | null>(null);
   const listRef = useRef<HTMLElement | null>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -45,18 +44,9 @@ const MenuSectionPageContent = ({
     }
   }, []);
 
-  const goBack = useCallback(() => {
-    router.back();
-  }, [router]);
-
   return (
     <div
       className={`flex relative items-center w-full flex-col gap-3 bg-red transition duration-300 ease-in mb-10 ${opacity}`}>
-      <RouteButton
-        containerClassName={cn('bottom-[100px]')}
-        text={'Назад'}
-        onClick={goBack}
-      />
 
       <SectionPageHeader
         title={title}

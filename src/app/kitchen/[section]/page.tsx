@@ -57,20 +57,11 @@ const KitchenMenuPage = () => {
 
   return (
     <div className="font-kurale bg-beige h-min-[100vh]">
-      <RouteButton
-        text={'Головна'}
-        route={'/'}
-        containerClassName={cn('bottom-[100px] left-2 w-[100px]', {
-          'w-20': isMobile
-        })}
-      />
-
       <MenuSectionPageContent
         opacity={show ? 'opacity-100' : 'opacity-0'}
         data={data}
         title={title}
       />
-
       <ButtonTint />
     </div>
   );
