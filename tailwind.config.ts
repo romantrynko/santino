@@ -20,8 +20,7 @@ const config: Config = {
       rose: '#EBB8B4',
       'light-blue': '#d3f3f5',
       beige: '#FFFBF4',
-      'cyan-950': '#0D1C2E',
-      
+      'cyan-950': '#0D1C2E'
     },
     extend: {
       backdropFilter: {
@@ -59,6 +58,9 @@ const config: Config = {
     }
   },
 
-  plugins: [require('@tailwindcss/postcss7-compat'), require('tailwindcss-no-scrollbar')]
+  plugins: [
+    require('@tailwindcss/postcss7-compat'),
+    require('tailwindcss-no-scrollbar')
+  ]
 };
 export default config;

@@ -53,7 +53,7 @@ const MenuSectionPageContent = ({
 
   return (
     <div
-      className={`flex relative items-center w-full flex-col gap-3 bg-beige transition duration-300 ease-in ${opacity}`}>
+      className={`flex relative items-center w-full flex-col gap-3 bg-red transition duration-300 ease-in mb-10 ${opacity}`}>
       <RouteButton
         containerClassName={cn('bottom-[100px]')}
         text={'Назад'}

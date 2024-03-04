@@ -7,6 +7,7 @@ import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 import RouteButton from '@/components/RouteButton';
 import { cn } from '@/utils/utils';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
+import { ButtonTint } from '@/components';
 
 const KitchenMenuPage = () => {
   const { section } = useParams();
@@ -70,6 +71,8 @@ const KitchenMenuPage = () => {
         data={data}
         title={title}
       />
+
+      <ButtonTint />
     </div>
   );
 };

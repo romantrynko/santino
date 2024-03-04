@@ -26,12 +26,12 @@ const HomePageContent = () => {
       <PageHeader
         containerClassName={cn('flex bg-main-logo-2', {
           'bg-main-logo-2': isPortrait,
-          'bg-logo-small-green': isMobile
+          // 'bg-logo-small-green': isMobile
         })}
       />
       <div
         className={cn(
-          'flex z-10 items-center flex-1 flex-col w-full mt-2 bg-white bg-cover bg-center gap-4',
+          'flex z-10 items-center flex-1 flex-col w-full mt-2 bg-white bg-cover bg-center gap-4 px-4 pb-4',
           {
             'gap-[120px]': isPortrait,
             'gap-4': isMobile,
@@ -43,11 +43,11 @@ const HomePageContent = () => {
             key={index}
             delay={index * 300}
             containerClassName={cn(
-              'flex-1 text-dark-green p-5 bg-bg-splat bg-contain rounded-[50px] w-3/6',
+              'flex-1 text-dark-green p-2 bg-bg-splat bg-contain rounded-[50px] w-3/6',
               { "w-[80%]": isPortrait, 'w-full': isMobile }
             )}
             innerContainerClassName="border border-dark-green rounded-[50px] bg-beige opacity-90"
-            textClassName={cn({
+            textClassName={cn('text-cyan-950',{
               'text-[70px]': isPortrait,
               'text-[34px]': isMobile
             })}

@@ -539,8 +539,8 @@ export const cocktails = [
 ];
 
 export const homePageSectionButtons = [
-  { value: 1, name: 'Кухня', path: '/kitchen', padding: 'p-4' },
-  { value: 2, name: 'Бар', path: '/bar', padding: 'p-4' }
+  { value: 1, name: 'Страви', path: '/kitchen', padding: 'p-4' },
+  { value: 2, name: 'Напої', path: '/bar', padding: 'p-4' }
 ];
 
 export const kitchenSectionButtons = [

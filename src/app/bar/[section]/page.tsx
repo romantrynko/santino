@@ -7,6 +7,7 @@ import MenuSectionPageContent from '@/app/pageContent/MenuSectionPageContent';
 import RouteButton from '@/components/RouteButton';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
+import { ButtonTint } from '@/components';
 
 const BarMenuPage = () => {
   const { section } = useParams();
@@ -70,11 +71,12 @@ const BarMenuPage = () => {
         })}
       />
 
-        <MenuSectionPageContent
-          opacity={show ? 'opacity-100' : 'opacity-0'}
-          data={data}
-          title={title}
-        />
+      <MenuSectionPageContent
+        opacity={show ? 'opacity-100' : 'opacity-0'}
+        data={data}
+        title={title}
+      />
+      <ButtonTint />
     </div>
   );
 };
