@@ -1,6 +1,6 @@
 'use client';
 
-import { NavigationBar, PageHeader, RouteButton } from '@/components';
+import { NavigationBar, PageHeader } from '@/components';
 import { useScreenSize } from '@/utils/hooks/useScreenSize';
 import { cn } from '@/utils/utils';
 import React from 'react';
@@ -15,7 +15,6 @@ const KitchenPageContent = () => {
           'w-full': isMobileInPortrait
         })}>
         <PageHeader
-          // title="Кухня"
           containerClassName={cn('fixed bg-yellow-light', {
             'h-60': isPortrait,
             'h-40 ': isMobileInPortrait
