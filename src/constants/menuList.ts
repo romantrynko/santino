@@ -419,7 +419,7 @@ export const mangalMenuList = [
     weight: '100',
     price: '160'
   },
-  { name: 'ОВОЧІ ПЕЧЕНІ НА МАНГАЛІ', weight: '250', price: '120' },
+  { name: 'ОВОЧІ З МАНГАЛУ', weight: '250', price: '225' },
   // {
   //   name: 'ДОРАДО НА МАНГАЛІ З РОЗМАРИНОМ',
   //   weight: '100',
