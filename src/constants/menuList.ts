@@ -19,7 +19,7 @@ export const appetizerList: IMenuItem[] = [
   {
     name: 'РУЛЕТИКИ З ЛОСОСЯ З ЧЕРВОНОЮ ІКРОЮ',
     weight: '150',
-    price: '240'
+    price: '390'
   },
   {
     name: 'ЗАКУСКА З ОСЕЛЕДЦЯ ТА КАРТОПЛІ',
