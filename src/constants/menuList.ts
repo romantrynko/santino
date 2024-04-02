@@ -617,7 +617,7 @@ export const kitchenSectionButtons = [
   },
   { section: 'side_dishes', name: 'Гарніри', path: '/kitchen/side_dishes' },
   { section: 'desserts', name: 'Десерти', path: '/kitchen/desserts' },
-  { section: 'pasta', name: 'Паста', path: '/kitchen/pasta' },
+  // { section: 'pasta', name: 'Паста', path: '/kitchen/pasta' },
   { section: 'for_kids', name: 'Для дітей', path: '/kitchen/for_kids' }
 ];
 
@@ -645,7 +645,7 @@ export enum KitchenMenuSections {
   HotAppetizer = 'hot_appetizer',
   SideDishes = 'side_dishes',
   Desserts = 'desserts',
-  Pasta = 'pasta',
+  // Pasta = 'pasta',
   MainDishes = 'main_dishes',
   ForKids = 'for_kids',
   MangalMenu = 'mangal_menu'
@@ -685,10 +685,10 @@ export const KitchenMenuList = {
     name: 'Десерти',
     data: dessertsList
   },
-  [KitchenMenuSections.Pasta]: {
-    name: 'Паста',
-    data: pastaList
-  },
+  // [KitchenMenuSections.Pasta]: {
+  //   name: 'Паста',
+  //   data: pastaList
+  // },
   [KitchenMenuSections.MainDishes]: {
     name: 'Основні страви',
     data: mainDishesList
