@@ -2,9 +2,46 @@ import { IMenuItem } from '@/components/MenuItem/MenuItem';
 
 export const appetizerList: IMenuItem[] = [
   {
-    name: 'ЗАКУСКА З ОСЕЛЕДЦЕМ ТА КАРТОПЛЕЮ І БУРЯКОМ, ЯЙЦЕМ ТА ЦИБУЛЕЮ',
+    name: 'САЛО СОЛОНЕ З ЧАСНИКОМ ТА ГРІНКАМИ',
+    weight: '100/30/50',
+    price: '190'
+  },
+  {
+    name: 'ПАШТЕТ З ОЖИНОВИМ СОУСОМ',
+    weight: '200/50',
+    price: '245'
+  },
+  {
+    name: 'ВІТЕЛЛО ТОНАТО',
+    weight: '200',
+    price: '275'
+  },
+  {
+    name: 'РУЛЕТИКИ З ЛОСОСЯ З ЧЕРВОНОЮ ІКРОЮ',
+    weight: '150',
+    price: '240'
+  },
+  {
+    name: 'ЗАКУСКА З ОСЕЛЕДЦЯ ТА КАРТОПЛІ',
     weight: '350',
     price: '220'
+  },
+  {
+    name: 'СИРНА ТАРІЛКА',
+    weight: '220',
+    price: '340'
+  },
+  {
+    name: 'ОВОЧЕВА ТАРІЛКА',
+    // description: 'спілі томати,огірки та свіжа зелень з цибулею',
+    weight: '300',
+    price: '270'
+  },
+  {
+    name: 'СОЛІННЯ ДО СТОЛУ',
+    // description: 'квашені томати та огірки, крижавка та слива',
+    weight: '350',
+    price: '260'
   },
   // {
   //   name: 'ТАР ТАР З ЛОСОСЯ З ЛИМОННОЮ ЗАПРАВКОЮ',
@@ -16,28 +53,12 @@ export const appetizerList: IMenuItem[] = [
   //   weight: '100/50',
   //   price: '340'
   // },
-  {
-    name: 'САЛО СОЛЕНЕ З ГРІНКАМИ ТА ЧАСНИКОМ',
-    weight: '100/30/50',
-    price: '190'
-  },
-  {
-    name: 'СИРНЕ ПЛАТО',
-    description:
-      'грісіні, камамбер, пармезан, ементаль та дор блю з медом-чілі',
-    weight: '160/30/30',
-    price: '325'
-  },
-  {
-    name: 'СОЛІННЯ ДОМАШНЄ',
-    description: 'квашені томати та огірки, крижавка та слива',
-    weight: '350',
-    price: '240'
-  },
   // {
-  //   name: 'ВІТЕЛО ТОННАТО З КАПЕРСАМИ',
-  //   weight: '100/100',
-  //   price: '240'
+  //   name: 'СИРНЕ ПЛАТО',
+  //   description:
+  //     'грісіні, камамбер, пармезан, ементаль та дор блю з медом-чілі',
+  //   weight: '160/30/30',
+  //   price: '325'
   // },
   // {
   //   name: 'ПАШТЕТ ПЕЧІНКОВИЙ КАРАМЕЛІЗОВАНИЙ В ПОЄДНАННІ З ЯГІДНИМ МУСОМ',
@@ -54,37 +75,37 @@ export const appetizerList: IMenuItem[] = [
   //   weight: '150',
   //   price: '240'
   // },
-  {
-    name: 'ОВОЧЕВА ТАРІЛКА',
-    description: 'спілі томати,огірки та свіжа зелень з цибулею',
-    weight: '300',
-    price: '255'
-  }
+
 ];
 
 export const saladsList: IMenuItem[] = [
   {
-    name: 'ЦЕЗАР КЛАСИЧНИЙ',
-    variants: [
-      { name: '- З ШМАТОЧКАМИ КУРКИ', weight: '250', price: '275' },
-      { name: '- З СЛАБОСОЛЕНИМ ЛОСОСЕМ', weight: '250', price: '310' },
-      { name: '- З КРЕВЕТКОЮ', weight: '200', price: '345' }
-    ]
-  },
-  {
-    name: 'САЛАТ ГРЕЦЬКИЙ З МІКСОМ ЗЕЛЕНІ',
+    name: 'ГРЕЦЬКИЙ З МІКСОМ ЗЕЛЕНІ',
     weight: '250',
-    price: '245'
+    price: '280'
   },
   {
-    name: 'САЛАТ ТЕПЛИЙ МЯСНИЙ З ОВОЧАМИ ТА СТЕБЛОМ САЛЕРИ',
+    name: 'ТЕПЛИЙ М’ЯСНИЙ З ОВОЧАМИ ТА САЛЕРОЮ',
     weight: '350',
-    price: '295'
+    price: '320'
   },
   {
-    name: 'САЛАТ "СОНЯХ"',
+    name: 'З КАПУСТИ «CОНЯХ»',
     weight: '200',
     price: '180'
+  },
+  {
+    name: 'МІЗЕРІЯ',
+    weight: '250',
+    price: '190'
+  },
+  {
+    name: 'ЦЕЗАР',
+    variants: [
+      { name: '- З КУРКОЮ', weight: '250', price: '280' },
+      { name: '- З ЛОСОСЕМ', weight: '250', price: '320' },
+      { name: '- З КРЕВЕТКАМИ', weight: '200', price: '360' }
+    ]
   },
   // {
   //   name: 'САЛАТ «CЛОВЯНСЬКИЙ»',
@@ -98,55 +119,65 @@ export const saladsList: IMenuItem[] = [
   // }
 ];
 
-// export const hotAppetizer: IMenuItem[] = [
-//   {
-//     name: 'СИРНІ КУЛЬКИ',
-//     weight: '150',
-//     price: '160'
-//   },
-//   {
-//     name: 'СУЛУГУНІ У ЛИСТКОВОМУ ТІСТІ',
-//     weight: '150',
-//     price: '160'
-//   },
-//   {
-//     name: 'КАМАМБЕР ГРИЛЬ НА БРІОШІ З ЯГІДНИМ СОУСОМ',
-//     weight: '120/30/30',
-//     price: '190'
-//   },
-//   {
-//     name: 'КРЕВЕТКИ В КИСЛОСОЛОДКОМУ СОУСІ',
-//     weight: '200',
-//     price: '260'
-//   },
-//   {
-//     name: 'М’ЯСО МІДІЙ ЗАПЕЧЕНІ ЗІ ШПИНАТОМ ТА СИРОМ ДОР БЛЮ',
-//     weight: '280',
-//     price: '260'
-//   }
-// ];
+export const hotAppetizerList: IMenuItem[] = [
+  {
+    name: 'СУЛУГУНІ В ЛИСТКОВОМУ ТІСТІ',
+    weight: '150',
+    price: '175'
+  },
+  {
+    name: 'СИРНІ КУЛЬКИ',
+    weight: '150',
+    price: '180'
+  },
+  {
+    name: 'СПАГЕТТІ КАРБОНАРА З ДОМАШНІМ ШПОНДЕРОМ',
+    weight: '340',
+    price: '280'
+  },
+  {
+    name: 'ШТРУДЕЛЬ З ЛОСОСЕМ ТА ШПИНАТОМ',
+    weight: '220',
+    price: '265'
+  },
+  //   {
+  //     name: 'КАМАМБЕР ГРИЛЬ НА БРІОШІ З ЯГІДНИМ СОУСОМ',
+  //     weight: '120/30/30',
+  //     price: '190'
+  //   },
+  //   {
+  //     name: 'КРЕВЕТКИ В КИСЛОСОЛОДКОМУ СОУСІ',
+  //     weight: '200',
+  //     price: '260'
+  //   },
+  //   {
+  //     name: 'М’ЯСО МІДІЙ ЗАПЕЧЕНІ ЗІ ШПИНАТОМ ТА СИРОМ ДОР БЛЮ',
+  //     weight: '280',
+  //     price: '260'
+  //   }
+];
 
-export const soups = [
+export const soupsList = [
+  {
+    name: 'БОРЩ УКРАЇНСЬКИЙ З САЛОМ ТА ГРІНКАМИ',
+    weight: '350',
+    price: '160'
+  },
   {
     name: 'БОГРАЧ',
     weight: '350',
     price: '190'
   },
   {
-    name: 'БОРЩ ЧЕРВОНИЙ ПОДАЄТЬСЯ З ГРІНКАМИ ТА САЛОМ',
-    weight: '350',
-    price: '165'
+    name: 'ЮШКА ГРИБНА',
+    weight: '300',
+    price: '180'
   },
-  // {
-  //   name: 'ЮШКА З БІЛИХ ГРИБІВ З РИСОВОЮ ВЕРМІШЕЛЛЮ',
-  //   weight: '300',
-  //   price: '140'
-  // },
 ];
 
-export const mainDishes = [
+export const mainDishesList = [
   {
-    name: 'ТОМЛЕНА ТЕЛЯТИНА З КАРТОПЛЯНИМ КРЕМОМ ТА ЧЕРІ',
+    name: 'ТОМЛЕНА ТЕЛЯТИНА З КАРТОПЛЯНИМ ПЮРЕ',
     weight: '370',
     price: '390'
   },
@@ -156,9 +187,9 @@ export const mainDishes = [
   //   price: '340'
   // },
   {
-    name: 'МЕДАЛЬЙОНИ З СВИННОЇ ВИРІЗКИ З СТРУЧКОВОЮ КВАСОЛЕЮ',
-    weight: '330',
-    price: '360'
+    name: 'НІЖНЕ КУРЯЧЕ ФІЛЕ З СОУСОМ З ПОРЕЮ',
+    weight: '300',
+    price: '280'
   },
   // {
   //   name: 'СТЕЙК З КУРКИ З ОВОЧАМИ У ВЕРШКОВОМУ СОУСІ',
@@ -168,7 +199,7 @@ export const mainDishes = [
   {
     name: 'ФІЛЕ ЛОСОСЯ ПІД ВЕРШКОВО-ІКОРНИМ СОУСОМ',
     weight: '300',
-    price: '455'
+    price: '460'
   },
   // {
   //   name: 'ФІЛЕ ДОРАДО З КАБАЧКОМ ТА ЧЕРІ',
@@ -177,32 +208,32 @@ export const mainDishes = [
   // }
 ];
 
-export const sideDishes = [
+export const sideDishesList = [
   {
-    name: 'КАРТОПЛЯ ЗАПЕЧЕНА З ЧАСНИКОМ',
+    name: 'КАРТОПЛЯ ЗАПЕЧЕНА',
     weight: '150',
-    price: '125'
+    price: '120'
   },
   {
-    name: 'КАРТОПЛЯ ФРІ + КЕТЧУП',
+    name: 'КАРТОПЛЯ ФРІ З СОУСОМ',
     weight: '150/50',
     price: '150'
   },
   {
-    name: 'СТРУЧКОВА КВАСОЛЯ В КИСЛОСОЛОДКОМУ СОУСІ З ІМБИРЕМ',
+    name: 'КВАСОЛЯ СТРУЧКОВА З КУНЖУТОМ',
     weight: '200',
-    price: '145'
+    price: '160'
   },
   {
-    name: 'СИРНІ КУЛЬКИ',
+    name: 'КУСКУС З ОВОЧАМИ',
     weight: '150',
-    price: '175'
+    price: '120'
   },
-  {
-    name: 'ОВОЧІ ГРИЛЬ',
-    weight: '250',
-    price: '225'
-  },
+  // {
+  //   name: 'ОВОЧІ ГРИЛЬ',
+  //   weight: '250',
+  //   price: '225'
+  // },
   // {
   //   name: 'ПОЛЕНТА З ПАРМЕЗАНОМ',
   //   weight: '200/30',
@@ -210,7 +241,7 @@ export const sideDishes = [
   // },
 ];
 
-export const pasta = [
+export const pastaList = [
   {
     name: 'КАРБОНАРА З ДОМАШНІМ ШПОНДЕРОМ',
     weight: '340',
@@ -228,11 +259,41 @@ export const pasta = [
   // }
 ];
 
-export const desserts = [
+export const dessertsList = [
+  {
+    name: 'НАПОЛЕОН',
+    weight: '150',
+    price: '220'
+  },
+  {
+    name: 'ШТРУДЕЛЬ ВИШНЕВИЙ З МОРОЗИВОМ',
+    weight: '150/50',
+    price: '200'
+  },
+  {
+    name: 'ПРОФІТРОЛІ З ВЕРШКАМИ ТА ЧОРНОСЛИВОМ',
+    weight: '150',
+    price: '160'
+  },
   {
     name: 'СИРНИКИ З ЯГІДНИМ СОУСОМ',
     weight: '150/50',
-    price: '140'
+    price: '160'
+  },
+  {
+    name: 'ВАРЕНИКИ З ВИШНЕЮ ТА СМЕТАНОЮ',
+    weight: '200',
+    price: '240'
+  },
+  {
+    name: 'МОРОЗИВО ПЛОМБІР',
+    weight: '100',
+    price: '120'
+  },
+  {
+    name: 'СОРБЕТ ЛАЙМОВИЙ',
+    weight: '50',
+    price: '70'
   },
   // {
   //   name: 'НАЛИСНИК–ТОРБИНКА З СИРНИМ МУСОМ ТА КАРАМЕЛЛЮ',
@@ -245,44 +306,40 @@ export const desserts = [
   //   price: '160'
   // },
   // {
-  //   name: 'ШТРУДЕЛЬ З ВИШНЕЮ З КУЛЬКОЮ МОРОЗИВА',
-  //   weight: '150/50',
-  //   price: '200'
-  // },
-  // {
   //   name: 'ТОМЛЕНІ ЛІСОВІ ЯГОДИ 2 З ВАНІЛЬНИМ МОРОЗИВОМ',
   //   weight: '200/50',
   //   price: '180'
   // },
+  // {
+  //   name: 'ДОДАТКИ ДО МОРОЗИВA: ШОКОЛАД, КАРАМЕЛЬ, ГОРІХИ',
+  //   price: '30'
+  // },
+  // {
+  //   name: 'ВЕРШКИ З ЧОРНОСЛИВОМ',
+  //   weight: '150',
+  //   price: '140'
+  // }
+];
+
+export const forKidsList = [
   {
-    name: 'МОРОЗИВО',
-    weight: '100',
-    price: '120'
-  },
-  {
-    name: 'ДОДАТКИ ДО МОРОЗИВA: ШОКОЛАД, КАРАМЕЛЬ, ГОРІХИ',
-    price: '30'
-  },
-  {
-    name: 'ВЕРШКИ З ЧОРНОСЛИВОМ',
-    weight: '150',
+    name: 'БУЛЬЙОН З КУРОЧКИ',
+    weight: '250',
     price: '140'
+  },
+  {
+    name: 'НАГЕТСИ КУРЯЧІ З КАРТОПЛЕЮ ФРІ',
+    weight: '150/150',
+    price: '190'
+  },
+  {
+    name: 'ПЕЛЬМЕНІ КОЛЬОРОВІ',
+    weight: '250',
+    price: '160'
   }
 ];
 
-// export const forKids = [
-//   {
-//     name: 'БУЛЬЙОН З МАКАРОНАМИ',
-//     weight: '200',
-//     price: '90'
-//   },
-//   {
-//     name: 'НАГЕТСИ З КАРТОПЛЕЮ ФРІ',
-//     price: '240'
-//   }
-// ];
-
-export const hotDrinks = [
+export const hotDrinksList = [
   { type: 'КАВА:' },
   {
     name: 'ЕСПРЕССО',
@@ -343,16 +400,16 @@ export const hotDrinks = [
   }
 ];
 
-export const mangalMenu = [
+export const mangalMenuList = [
   { type: 'М’ЯСО' },
   {
     name: 'ШАШЛИК',
     variants: [
-      { name: '- З КУРЯЧОГО ФІЛЕ', weight: '100', price: '95' },
-      // { name: '- З КУРЯЧОГО СТЕГНА БЕЗ КІСТКИ', weight: '100', price: '80' },
-      { name: '- СВИННИЙ ОШИЙОК', weight: '100', price: '135' },
-      // { name: '- СВИННА ВИРІЗКА', weight: '100', price: '120' },
+      { name: '- З СВИННОГО ОШИЙКА', weight: '100', price: '140' },
       { name: '- З ТЕЛЯТИНИ', weight: '100', price: '170' },
+      { name: '- З КУРЯЧОГО ФІЛЕ', weight: '100', price: '110' },
+      { name: '- З КУРЯЧОГО СТЕГНА', weight: '100', price: '100' },
+      // { name: '- СВИННА ВИРІЗКА', weight: '100', price: '120' },
       // { name: '- РЕБРА СВИННІ', weight: '100', price: '95' }
     ]
   },
@@ -360,8 +417,9 @@ export const mangalMenu = [
   {
     name: 'ФОРЕЛЬ НА МАНГАЛІ З ЛИМОНОМ',
     weight: '100',
-    price: '155'
+    price: '160'
   },
+  { name: 'ОВОЧІ ПЕЧЕНІ НА МАНГАЛІ', weight: '250', price: '120' },
   // {
   //   name: 'ДОРАДО НА МАНГАЛІ З РОЗМАРИНОМ',
   //   weight: '100',
@@ -372,13 +430,12 @@ export const mangalMenu = [
   //   weight: '100',
   //   price: '180'
   // },
-  // { type: 'ОВОЧІ ПЕЧЕНІ НА МАНГАЛІ', weight: '250', price: '120' },
   { type: 'СОУСИ' },
-  { name: 'BBQ, АДЖИКА, ТАР-ТАР, СИРНИЙ, САЦЕБЕЛІ', weight: '50', price: '60' },
+  { name: 'BBQ, АДЖИКА, САЦЕБЕЛІ, ТАРТАР', weight: '50', price: '60' },
   // { name: 'СВІЖОСПЕЧЕНА ЧІАБАТТА', price: '60' }
 ];
 
-export const nonAlcoholDrinks = [
+export const nonAlcoholDrinksList = [
   {
     name: 'ПЕПСІКОЛА скло',
     weight: '250',
@@ -436,7 +493,7 @@ export const nonAlcoholDrinks = [
   { name: 'ШОКОЛАДНИЙ', weight: '300', price: '85' }
 ];
 
-export const strongAlcohol = [
+export const strongAlcoholList = [
   { type: 'ГОРІЛКА' },
   { name: 'ПЕРЛОВА', weight: '50', price: '40' },
   { name: 'КОЗАЦЬКА РАДА', weight: '50', price: '40' },
@@ -481,7 +538,7 @@ export const strongAlcohol = [
   { name: '* Відкоркування пляшки власного алкоголю об’ємом до 1л вартує 400 грн.' }
 ];
 
-export const wines = [
+export const winesList = [
   { type: 'ШАМПАНСЬКЕ' },
   { name: 'МОЕТ ШАНДОН', weight: '750', price: '3400' },
   { type: 'ІГРИСТІ' },
@@ -505,7 +562,7 @@ export const wines = [
   { name: '* Відкоркування пляшки власного алкоголю об’ємом до 1л вартує 400 грн.' }
 ];
 
-export const beer = [
+export const beerList = [
   { type: 'ПЛЯШКОВЕ:' },
   { name: 'КРОНЕНСБУРГ БЛАНШ', weight: '500', price: '100' },
   { name: 'ХУГАРДЕН', weight: '330', price: '120' },
@@ -520,7 +577,7 @@ export const beer = [
   // }
 ];
 
-export const cocktails = [
+export const cocktailsList = [
   { type: 'КОКТЕЙЛІ КЛАСИЧНІ' },
   { name: 'МОХІТО ( КЛАСИЧНИЙ/ПОЛУНИЧНИЙ)', weight: '250', price: '140' },
   { name: 'МАЙ ТАЙ', weight: '250', price: '185' },
@@ -553,15 +610,15 @@ export const kitchenSectionButtons = [
   { section: 'appetizer', name: 'Закуски', path: '/kitchen/appetizer' },
   { section: 'salads', name: 'Салати', path: '/kitchen/salads' },
   { section: 'soups', name: 'Супи', path: '/kitchen/soups' },
-  // {
-  //   section: 'hot_appetizer',
-  //   name: 'Гарячі закуски',
-  //   path: '/kitchen/hot_appetizer'
-  // },
+  {
+    section: 'hot_appetizer',
+    name: 'Гарячі закуски',
+    path: '/kitchen/hot_appetizer'
+  },
   { section: 'side_dishes', name: 'Гарніри', path: '/kitchen/side_dishes' },
   { section: 'desserts', name: 'Десерти', path: '/kitchen/desserts' },
   { section: 'pasta', name: 'Паста', path: '/kitchen/pasta' },
-  // { section: 'for_kids', name: 'Для дітей', path: '/kitchen/for_kids' }
+  { section: 'for_kids', name: 'Для дітей', path: '/kitchen/for_kids' }
 ];
 
 export const barSectionButtons = [
@@ -585,12 +642,12 @@ export enum KitchenMenuSections {
   Appetizers = 'appetizer',
   Salads = 'salads',
   Soups = 'soups',
-  // HotAppetizer = 'hot_appetizer',
+  HotAppetizer = 'hot_appetizer',
   SideDishes = 'side_dishes',
   Desserts = 'desserts',
   Pasta = 'pasta',
   MainDishes = 'main_dishes',
-  // ForKids = 'for_kids',
+  ForKids = 'for_kids',
   MangalMenu = 'mangal_menu'
 }
 
@@ -614,61 +671,61 @@ export const KitchenMenuList = {
   },
   [KitchenMenuSections.Soups]: {
     name: 'Супи',
-    data: soups
+    data: soupsList
   },
-  // [KitchenMenuSections.HotAppetizer]: {
-  //   name: 'Гарячі закуски',
-  //   data: hotAppetizer
-  // },
+  [KitchenMenuSections.HotAppetizer]: {
+    name: 'Гарячі закуски',
+    data: hotAppetizerList
+  },
   [KitchenMenuSections.SideDishes]: {
     name: 'Гарніри',
-    data: sideDishes
+    data: sideDishesList
   },
   [KitchenMenuSections.Desserts]: {
     name: 'Десерти',
-    data: desserts
+    data: dessertsList
   },
   [KitchenMenuSections.Pasta]: {
     name: 'Паста',
-    data: pasta
+    data: pastaList
   },
   [KitchenMenuSections.MainDishes]: {
     name: 'Основні страви',
-    data: mainDishes
+    data: mainDishesList
   },
-  // [KitchenMenuSections.ForKids]: {
-  //   name: 'Для дітей',
-  //   data: forKids
-  // },
+  [KitchenMenuSections.ForKids]: {
+    name: 'Для дітей',
+    data: forKidsList
+  },
   [KitchenMenuSections.MangalMenu]: {
     name: 'Мангал меню',
-    data: mangalMenu
+    data: mangalMenuList
   }
 };
 
 export const BarMenuList = {
   [BarMenuSections.HotDrinks]: {
     name: 'Гарячі напої',
-    data: hotDrinks
+    data: hotDrinksList
   },
   [BarMenuSections.StrongAlcohol]: {
     name: 'Міцний алкоголь',
-    data: strongAlcohol
+    data: strongAlcoholList
   },
   [BarMenuSections.Wine]: {
     name: 'Вино',
-    data: wines
+    data: winesList
   },
   [BarMenuSections.Cocktails]: {
     name: 'Коктейлі',
-    data: cocktails
+    data: cocktailsList
   },
   [BarMenuSections.NonAlcoholDrinks]: {
     name: 'Напої безалкогольні',
-    data: nonAlcoholDrinks
+    data: nonAlcoholDrinksList
   },
   [BarMenuSections.Beer]: {
     name: 'Пиво',
-    data: beer
+    data: beerList
   }
 };
