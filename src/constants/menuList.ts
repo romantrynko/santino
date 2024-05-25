@@ -1,21 +1,30 @@
 import { IMenuItem } from "@/components/MenuItem/MenuItem";
-import { count } from "console";
 
 export const appetizerList: IMenuItem[] = [
   {
-    name: "САЛО СОЛОНЕ З ЧАСНИКОМ ТА ГРІНКАМИ",
-    weight: "100/30/50",
-    price: "190",
+    name: "БРУСКЕТТА З ТОМАТАМИ",
+    weight: "150",
+    price: "170",
   },
   {
-    name: "ПАШТЕТ З ОЖИНОВИМ СОУСОМ",
+    name: "СИРНА ТАРІЛКА",
+    weight: "220",
+    price: "340",
+  },
+  {
+    name: "ПАТЕ З КУРЯЧОЇ ПЕЧІНКИ",
     weight: "200/50",
-    price: "245",
+    price: "260",
   },
   {
     name: "ВІТЕЛЛО ТОНАТО",
     weight: "200",
-    price: "275",
+    price: "280",
+  },
+  {
+    name: "САЛО ФІРМОВЕ З ГРІНКАМИ",
+    weight: "100/30/50",
+    price: "190",
   },
   {
     name: "РУЛЕТИКИ З ЛОСОСЯ З ЧЕРВОНОЮ ІКРОЮ",
@@ -26,11 +35,6 @@ export const appetizerList: IMenuItem[] = [
     name: "ЗАКУСКА З ОСЕЛЕДЦЯ ТА КАРТОПЛІ",
     weight: "350",
     price: "220",
-  },
-  {
-    name: "СИРНА ТАРІЛКА",
-    weight: "220",
-    price: "340",
   },
   {
     name: "ОВОЧЕВА ТАРІЛКА",
@@ -44,6 +48,16 @@ export const appetizerList: IMenuItem[] = [
     weight: "350",
     price: "260",
   },
+  {
+    name: "СЛИВИ МАРИНОВАНІ",
+    weight: "150",
+    price: "130",
+  },
+  // {
+  //   name: "ПАШТЕТ З ОЖИНОВИМ СОУСОМ",
+  //   weight: "200/50",
+  //   price: "245",
+  // },
   // {
   //   name: 'ТАР ТАР З ЛОСОСЯ З ЛИМОННОЮ ЗАПРАВКОЮ',
   //   weight: '150',
@@ -82,15 +96,10 @@ export const saladsList: IMenuItem[] = [
   {
     name: "ГРЕЦЬКИЙ З МІКСОМ ЗЕЛЕНІ",
     weight: "250",
-    price: "280",
+    price: "240",
   },
   {
-    name: "ТЕПЛИЙ М’ЯСНИЙ З ОВОЧАМИ ТА САЛЕРОЮ",
-    weight: "350",
-    price: "320",
-  },
-  {
-    name: "З КАПУСТИ «CОНЯХ»",
+    name: "«CОНЯХ» З КАПУСТИ",
     weight: "200",
     price: "180",
   },
@@ -98,6 +107,11 @@ export const saladsList: IMenuItem[] = [
     name: "МІЗЕРІЯ",
     weight: "250",
     price: "190",
+  },
+  {
+    name: "ТЕПЛИЙ З ТЕЛЯТИНОЮ, ОВОЧАМИ ТА СТЕБЛОМ СЕЛЕРИ",
+    weight: "350",
+    price: "320",
   },
   {
     name: "ЦЕЗАР",
@@ -121,24 +135,34 @@ export const saladsList: IMenuItem[] = [
 
 export const hotAppetizerList: IMenuItem[] = [
   {
-    name: "СУЛУГУНІ В ЛИСТКОВОМУ ТІСТІ",
-    weight: "150",
-    price: "175",
-  },
-  {
     name: "СИРНІ КУЛЬКИ",
     weight: "150",
     price: "180",
   },
   {
-    name: "СПАГЕТТІ КАРБОНАРА З ДОМАШНІМ ШПОНДЕРОМ",
-    weight: "340",
-    price: "280",
+    name: "СУЛУГУНІ В ЛИСТКОВОМУ ТІСТІ",
+    weight: "150",
+    price: "180",
+  },
+  {
+    name: "КРЕВЕТКИ В ЧАСНИКОВОМУ СОУСІ",
+    weight: "200",
+    price: "380",
   },
   {
     name: "ШТРУДЕЛЬ З ЛОСОСЕМ ТА ШПИНАТОМ",
     weight: "220",
-    price: "265",
+    price: "270",
+  },
+  {
+    name: "БАНОШ ЗІ ШКВАРКАМИ ТА ПЕЧЕРИЦЯМИ",
+    weight: "300",
+    price: "250",
+  },
+  {
+    name: "СПАГЕТТІ КАРБОНАРА З ДОМАШНІМ ШПОНДЕРОМ",
+    weight: "340",
+    price: "280",
   },
   //   {
   //     name: 'КАМАМБЕР ГРИЛЬ НА БРІОШІ З ЯГІДНИМ СОУСОМ',
@@ -159,9 +183,9 @@ export const hotAppetizerList: IMenuItem[] = [
 
 export const soupsList = [
   {
-    name: "БОРЩ УКРАЇНСЬКИЙ З САЛОМ ТА ГРІНКАМИ",
+    name: "БОРЩ ФІРМОВИЙ З ЦИБУЛЕВИМ ПИРОГОМ",
     weight: "350",
-    price: "160",
+    price: "180",
   },
   {
     name: "БОГРАЧ",
@@ -169,7 +193,7 @@ export const soupsList = [
     price: "190",
   },
   {
-    name: "ЮШКА ГРИБНА",
+    name: "ЮШКА ГРИБНА З РИСОВОЮ ВЕРМІШЕЛЛЮ",
     weight: "300",
     price: "180",
   },
@@ -181,13 +205,18 @@ export const mainDishesList = [
     weight: "370",
     price: "390",
   },
+  {
+    name: 'ВИРІЗКА З ТЕЛЯТИНИ ПІД МИГДАЛЕВО-ВЕРШКОВИМ СОУСОМ',
+    weight: '250',
+    price: '380'
+  },
   // {
   //   name: 'СВИННА ВИРІЗКА ІЗ ЗАПЕЧЕНОЮ КАРТОПЛЕЮ ТА СОУСОМ ДЕМІГЛАС',
   //   weight: '380',
   //   price: '340'
   // },
   {
-    name: "НІЖНЕ КУРЯЧЕ ФІЛЕ З СОУСОМ З ПОРЕЮ",
+    name: "НІЖНЕ КУРЯЧЕ ФІЛЕ ПІД СОУСОМ З ОВОЧАМИ",
     weight: "300",
     price: "280",
   },
@@ -197,15 +226,15 @@ export const mainDishesList = [
   //   price: '290'
   // },
   {
-    name: "ФІЛЕ ЛОСОСЯ ПІД ВЕРШКОВО-ІКОРНИМ СОУСОМ",
+    name: "ФІЛЕ ЛОСОСЯ ПІД ІКОРНИМ СОУСОМ З ОВОЧАМИ",
     weight: "300",
     price: "460",
   },
-  // {
-  //   name: 'ФІЛЕ ДОРАДО З КАБАЧКОМ ТА ЧЕРІ',
-  //   weight: '300',
-  //   price: '380'
-  // }
+  {
+    name: 'ФІЛЕ ДОРАДО З КАБАЧКОВОЮ ПАСТОЮ',
+    weight: '300',
+    price: '360'
+  }
 ];
 
 export const sideDishesList = [
@@ -220,15 +249,25 @@ export const sideDishesList = [
     price: "150",
   },
   {
+    name: "КАРТОПЛЯ СМАЖЕНА З ЦИБУЛЬКОЮ",
+    weight: "200",
+    price: "160",
+  },
+  {
     name: "КВАСОЛЯ СТРУЧКОВА З КУНЖУТОМ",
     weight: "200",
     price: "160",
   },
   {
-    name: "КУСКУС З ОВОЧАМИ",
+    name: "СПАРЖА",
     weight: "150",
-    price: "120",
+    price: "160",
   },
+  // {
+  //   name: "КУСКУС З ОВОЧАМИ",
+  //   weight: "150",
+  //   price: "120",
+  // },
   // {
   //   name: 'ОВОЧІ ГРИЛЬ',
   //   weight: '250',
@@ -263,17 +302,17 @@ export const dessertsList = [
   {
     name: "НАПОЛЕОН",
     weight: "150",
-    price: "220",
+    price: "180",
   },
   {
     name: "ШТРУДЕЛЬ ВИШНЕВИЙ З МОРОЗИВОМ",
     weight: "150/50",
-    price: "200",
+    price: "190",
   },
   {
     name: "ПРОФІТРОЛІ З ВЕРШКАМИ ТА ЧОРНОСЛИВОМ",
     weight: "150",
-    price: "160",
+    price: "150",
   },
   {
     name: "СИРНИКИ З ЯГІДНИМ СОУСОМ",
@@ -281,9 +320,14 @@ export const dessertsList = [
     price: "160",
   },
   {
+    name: "МЛИНЦІ З МЕДОМ",
+    weight: "100/30",
+    price: "140",
+  },
+  {
     name: "ВАРЕНИКИ З ВИШНЕЮ ТА СМЕТАНОЮ",
     weight: "200",
-    price: "240",
+    price: "190",
   },
   {
     name: "МОРОЗИВО ПЛОМБІР",
@@ -325,17 +369,17 @@ export const forKidsList = [
   {
     name: "БУЛЬЙОН З КУРОЧКИ",
     weight: "250",
-    price: "140",
+    price: "120",
   },
   {
     name: "НАГЕТСИ КУРЯЧІ З КАРТОПЛЕЮ ФРІ",
     weight: "150/150",
-    price: "190",
+    price: "220",
   },
   {
-    name: "ПЕЛЬМЕНІ КОЛЬОРОВІ",
+    name: "ПЕЛЬМЕНІ З ТЕЛЯТИНОЮ КОЛЬОРОВІ",
     weight: "250",
-    price: "160",
+    price: "180",
   },
 ];
 
@@ -346,6 +390,10 @@ export const hotDrinksList = [
     price: "65",
   },
   {
+    name: "ЕСПРЕССО ТОНІК",
+    price: "120",
+  },
+  {
     name: "АМЕРИКАНО",
     price: "65",
   },
@@ -354,7 +402,11 @@ export const hotDrinksList = [
     price: "80",
   },
   {
-    name: "КАВА ПО-ІРЛАНДСЬКИ",
+    name: "КАПУОРАНДЖ",
+    price: "195",
+  },
+  {
+    name: "КАВА ПО-ІРЛАНДСЬКИ (з віскі)",
     price: "150",
   },
   {
@@ -374,8 +426,8 @@ export const hotDrinksList = [
     price: "145",
   },
   {
-    name: "КАКАО НЕСКВІК",
-    price: "75",
+    name: "КАКАО АВТОРСЬКЕ",
+    price: "140",
   },
   { type: "ЧАЙ:" },
   {
@@ -413,11 +465,21 @@ export const mangalMenuList = [
       // { name: '- РЕБРА СВИННІ', weight: '100', price: '95' }
     ],
   },
+  {
+    name: "ЧАЛАГАЧ З АДЖИКОЮ",
+    weight: "100",
+    price: "150",
+  },
   { type: "РИБА" },
   {
     name: "ФОРЕЛЬ НА МАНГАЛІ З ЛИМОНОМ",
     weight: "100",
     price: "160",
+  },
+  {
+    name: "ДОРАДО",
+    weight: "100",
+    price: "190",
   },
   { name: "ОВОЧІ З МАНГАЛУ", weight: "250", price: "225" },
   // {
@@ -437,7 +499,7 @@ export const mangalMenuList = [
 
 export const nonAlcoholDrinksList = [
   {
-    name: "ПЕПСІКОЛА скло",
+    name: "ПЕПСІ, КОКА КОЛА скло",
     weight: "250",
     price: "50",
   },
@@ -482,15 +544,20 @@ export const nonAlcoholDrinksList = [
     weight: "250",
     price: "45",
   },
+  {
+    name: 'КАМБУЧА КРАФТОВА',
+    weight: '250',
+    price: '90',
+  },
   { type: "Cвіжі соки" },
   { name: "МОРКВЯНИЙ", weight: "200", price: "90" },
   { name: "ЯБЛУЧНИЙ", weight: "200", price: "90" },
   { name: "АПЕЛЬСИНОВИЙ", weight: "200", price: "130" },
   { name: "ГРЕЙПФРУТОВИЙ", weight: "200", price: "140" },
   { type: "Молочні коктейлі" },
-  { name: "КЛАСИЧНИЙ", weight: "300", price: "85" },
-  { name: "БАНАНОВИЙ", weight: "300", price: "95" },
-  { name: "ШОКОЛАДНИЙ", weight: "300", price: "95" },
+  { name: "КЛАСИЧНИЙ", weight: "300", price: "90" },
+  { name: "БАНАНОВИЙ", weight: "300", price: "110" },
+  { name: "ШОКОЛАДНИЙ", weight: "300", price: "110" },
 ];
 
 export const strongAlcoholList = [
@@ -623,7 +690,7 @@ export const cocktailsList = [
   { name: "НЕГРОНІ", weight: "90", price: "189" },
   { name: "ДЖИН ТОНІК КЛАСИЧНИЙ/ЯГІДНИЙ", weight: "200", price: "140" },
   { type: "КОКТЕЙЛІ БЕЗАЛКОГОЛЬНІ" },
-  { name: "МОХІТО", weight: "250", price: "95" },
+  { name: "МОХІТО", weight: "250", price: "110" },
   // { name: "СОЛОДКА ВАТА", weight: "110", price: "95" },
 ];
 
